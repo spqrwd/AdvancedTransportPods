@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DesignatorDropdownGroupDef>
+    <defName>AdvTransportPods</defName>
+  </DesignatorDropdownGroupDef>
+
+  <ThingDef Abstract="True" Name="AdvTrasportPodsBase" ParentName="BuildingBase">
+    <description>A larger, more efficient version of the launchable sub-orbital cargo pod. Can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</description>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0.7</fillPercent>
+    <designationCategory>Misc</designationCategory>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <inspectorTabs>
+      <li>ITab_TransporterContents</li>
+    </inspectorTabs>
+    <placeWorkers>
+      <li>PlaceWorker_NeedsFuelingPort</li>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef Name="AdvTrasportPod275" ParentName="AdvTrasportPodsBase">
+    <defName>AdvancedTransportPodI</defName>
+    <label>transport pod 275</label>
+    <graphicData>
+      <texPath>AdvancedTransportPod275</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.2,2.2)</drawSize>
+    </graphicData>
+    <designatorDropdown>AdvTransportPods</designatorDropdown>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>2200</WorkToBuild>
+      <Flammability>0.35</Flammability>
+    </statBases>
+    <costList>
+      <Steel>90</Steel>
+      <Plasteel>5</Plasteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Transporter">
+        <restEffectiveness>0.8</restEffectiveness>
+        <massCapacity>275</massCapacity>
+      </li>
+      <li Class="CompProperties_Launchable" />
+    </comps>
+		<researchPrerequisites>
+			<li>LargeTransportPod</li>
+		</researchPrerequisites>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+    <uiIconScale>0.59</uiIconScale>
+  </ThingDef>
+
+  <ThingDef Name="AdvTrasportPod400" ParentName="AdvTrasportPodsBase">
+    <defName>AdvancedTransportPodII</defName>
+    <label>transport pod 400</label>
+    <graphicData>
+      <texPath>AdvancedTransportPod400</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.3,2.3)</drawSize>
+    </graphicData>
+    <designatorDropdown>AdvTransportPods</designatorDropdown>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Flammability>0.35</Flammability>
+    </statBases>
+    <costList>
+      <Steel>130</Steel>
+      <Plasteel>10</Plasteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Transporter">
+        <restEffectiveness>0.8</restEffectiveness>
+        <massCapacity>400</massCapacity>
+      </li>
+      <li Class="CompProperties_Launchable" />
+    </comps>
+		<researchPrerequisites>
+			<li>AdvancedTransportPods</li>
+		</researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <uiIconScale>0.59</uiIconScale>
+  </ThingDef>
+
+  <ThingDef Name="AdvTrasportPod525" ParentName="AdvTrasportPodsBase">
+    <defName>AdvancedTransportPodIII</defName>
+    <label>transport pod 525</label>
+    <graphicData>
+      <texPath>AdvancedTransportPod525</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.4,2.4)</drawSize>
+    </graphicData>
+    <designatorDropdown>AdvTransportPods</designatorDropdown>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Flammability>0.35</Flammability>
+    </statBases>
+    <costList>
+      <Steel>160</Steel>
+      <Plasteel>20</Plasteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Transporter">
+        <restEffectiveness>0.8</restEffectiveness>
+        <massCapacity>525</massCapacity>
+      </li>
+      <li Class="CompProperties_Launchable" />
+    </comps>
+		<researchPrerequisites>
+			<li>AdvancedTransportPods</li>
+		</researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <uiIconScale>0.59</uiIconScale>
+  </ThingDef>
+
+</Defs>
