@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest>
+  <identifier>AdvTransportPods</identifier>
+  <version>1.2</version>
+  <showCrossPromotions>true</showCrossPromotions>
+  <manifestUri>https://cdn.jsdelivr.net/gh/spqrwd/AdvancedTransportPods@master/About/Manifest.xml</manifestUri>
+  <downloadUri>https://github.com/spqrwd/AdvancedTransportPods/releases/latest</downloadUri>
+</Manifest>
