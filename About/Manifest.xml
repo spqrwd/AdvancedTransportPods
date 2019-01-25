@@ -3,6 +3,6 @@
   <identifier>AdvTransportPods</identifier>
   <version>1.2</version>
   <showCrossPromotions>true</showCrossPromotions>
-  <manifestUri>https://cdn.jsdelivr.net/gh/spqrwd/AdvancedTransportPods@master/About/Manifest.xml</manifestUri>
+  <manifestUri>https://raw.githack.com/spqrwd/AdvancedTransportPods/master/About/Manifest.xml</manifestUri>
   <downloadUri>https://github.com/spqrwd/AdvancedTransportPods/releases/latest</downloadUri>
 </Manifest>
