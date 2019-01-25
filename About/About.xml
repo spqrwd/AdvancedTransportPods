@@ -2,8 +2,10 @@
 <ModMetaData>
   <name>Advanced Transport Pods</name>
   <author>crewd</author>
-  <targetVersion>1.0.2096</targetVersion>
-  <description>ATP v1.1 for RimWorld 1.0
+  <supportedVersions>
+    <li>1.0</li>
+  </supportedVersions>
+  <description>ATP v1.2 for RimWorld 1.0
 
-Adds three new larger versions (275/400/525 kg) of the original transport pod to the game, including new research options for unlocking them.</description>
+Adds new versions (50/275/400/525 kg) of the original transport pod to the game, including new research options for unlocking the larger ones.</description>
 </ModMetaData>

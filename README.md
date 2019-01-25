@@ -2,9 +2,16 @@
 
 # Advanced Transport Pods for RimWorld
 
-Adds new larger versions of the original transport pod to the game.
+Adds several versions of the original transport pod to the game.
 
-The maximum load capacity has been increased to 275 kg for the large transport pod, and 400/525 kg for the more advanced versions. These pods also require small amounts of plasteel for construction. All new pods can be found from a convenient drop-down list under one icon in the Misc items category. Two new research options have been added for unlocking the secrets of the manufacturing processes.
+The small pod can carry 50 kg, whereas the capacity for the large transport pod has been increased to 275 kg, and 400/525 kg for the more advanced versions. The larger pods also require small amounts of plasteel for construction. All new pods can be found from a convenient drop-down list under one icon in the Misc items category. Two new research options have been added for unlocking the larger variants.
+
+Transport pod 50
+
+Research needed: "Transport pod"  
+Construction skill needed: 5  
+Construction requirements:
+- 25 Steel
 
 Transport pod 275
 
