@@ -6,7 +6,7 @@
   </DesignatorDropdownGroupDef>
 
   <ThingDef Abstract="True" Name="AdvTrasportPodsBase" ParentName="BuildingBase">
-    <description>A larger, more efficient version of the launchable sub-orbital cargo pod. Can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</description>
+    <description>A launchable sub-orbital cargo pod. Can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</description>
     <size>(1,1)</size>
     <rotatable>false</rotatable>
     <tickerType>Normal</tickerType>
@@ -15,6 +15,7 @@
     <castEdgeShadows>false</castEdgeShadows>
     <fillPercent>0.7</fillPercent>
     <designationCategory>Misc</designationCategory>
+    <designatorDropdown>AdvTransportPods</designatorDropdown>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <inspectorTabs>
       <li>ITab_TransporterContents</li>
@@ -25,6 +26,36 @@
     </placeWorkers>
   </ThingDef>
 
+  <ThingDef Name="SmallTrasportPod50" ParentName="AdvTrasportPodsBase">
+    <defName>SmallTransportPodI</defName>
+    <label>transport pod 50</label>
+    <graphicData>
+      <texPath>Things/Special/DropPod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.2,1.2)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>500</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>25</Steel>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Transporter">
+        <restEffectiveness>0.8</restEffectiveness>
+        <massCapacity>50</massCapacity>
+      </li>
+      <li Class="CompProperties_Launchable" />
+    </comps>
+    <researchPrerequisites>
+      <li>TransportPod</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <uiIconScale>0.65</uiIconScale>
+  </ThingDef>
+
   <ThingDef Name="AdvTrasportPod275" ParentName="AdvTrasportPodsBase">
     <defName>AdvancedTransportPodI</defName>
     <label>transport pod 275</label>
@@ -33,7 +64,6 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(2.2,2.2)</drawSize>
     </graphicData>
-    <designatorDropdown>AdvTransportPods</designatorDropdown>
     <statBases>
       <MaxHitPoints>250</MaxHitPoints>
       <WorkToBuild>2200</WorkToBuild>
@@ -51,9 +81,9 @@
       </li>
       <li Class="CompProperties_Launchable" />
     </comps>
-		<researchPrerequisites>
-			<li>LargeTransportPod</li>
-		</researchPrerequisites>
+    <researchPrerequisites>
+      <li>LargeTransportPod</li>
+    </researchPrerequisites>
     <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
     <uiIconScale>0.59</uiIconScale>
   </ThingDef>
@@ -66,7 +96,6 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(2.3,2.3)</drawSize>
     </graphicData>
-    <designatorDropdown>AdvTransportPods</designatorDropdown>
     <statBases>
       <MaxHitPoints>250</MaxHitPoints>
       <WorkToBuild>3000</WorkToBuild>
@@ -84,9 +113,9 @@
       </li>
       <li Class="CompProperties_Launchable" />
     </comps>
-		<researchPrerequisites>
-			<li>AdvancedTransportPods</li>
-		</researchPrerequisites>
+    <researchPrerequisites>
+      <li>AdvancedTransportPods</li>
+    </researchPrerequisites>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <uiIconScale>0.59</uiIconScale>
   </ThingDef>
@@ -99,7 +128,6 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(2.4,2.4)</drawSize>
     </graphicData>
-    <designatorDropdown>AdvTransportPods</designatorDropdown>
     <statBases>
       <MaxHitPoints>250</MaxHitPoints>
       <WorkToBuild>4000</WorkToBuild>
@@ -117,9 +145,9 @@
       </li>
       <li Class="CompProperties_Launchable" />
     </comps>
-		<researchPrerequisites>
-			<li>AdvancedTransportPods</li>
-		</researchPrerequisites>
+    <researchPrerequisites>
+      <li>AdvancedTransportPods</li>
+    </researchPrerequisites>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <uiIconScale>0.59</uiIconScale>
   </ThingDef>
