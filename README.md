@@ -2,9 +2,11 @@
 
 # Advanced Transport Pods for RimWorld
 
-Adds several versions of the original transport pod to the game.
+Adds several new versions of the transport pod to the game.
 
-The small pod can carry 50 kg, whereas the capacity for the large transport pod has been increased to 275 kg, and 400/525 kg for the more advanced versions. The larger pods also require small amounts of plasteel for construction. All new pods can be found from a convenient drop-down list under one icon in the Misc items category. Two new research options have been added for unlocking the larger variants.
+In addition to the original pod (150 kg capacity) there is a smaller version that can carry 50 kg, a large transport pod with a carrying capacity of 275 kg, and two more advanced versions with 400 & 525 kg capacities. The larger pods also require small amounts of plasteel for construction. The original 150 kg pod has been renamed to "Transport pod 150". All pods can now be found from a convenient drop-down list under one icon in the Misc items category. Two new research options have been added for unlocking the larger variants.
+
+The Advanced transport pods research also unlocks a new pod launcher with more hitpoints (doubled to 400), and greater fuel capacity (666) than the vanilla one (150), significantly extending its maximum range. Both launchers can be found from a drop-down list under one icon in the Misc items category. In addition, the pod construction templates have been linked to both launchers allowing to quickly and easily build new pods directly from the launcher (no need to browse the Architect menu).
 
 Transport pod 50
 
@@ -31,11 +33,20 @@ Construction requirements:
 - 10 / 20 Plasteel
 - 2 Components
 
+Pod launcher MKII
+
+Research needed: "Advanced transport pods"  
+Construction skill needed: 7  
+Construction requirements:
+- 60 Steel
+- 5 Plasteel
+- 2 Components
+
 # Known Issues
 
 Should be mostly compatible with existing savegames, and other mods. Though there have been reports of the new pods disappearing as soon as one has been constructed, but the cause is unknown.
 
-Due to some refactoring of the XMLs, games saved using the initial v1.0 of the mod will produce some errors in the debug log (see examples below), but these can be safely ignored. Though you will lose the earlier Advanced Transport Pods research, and all already constructed pods. Similar error messages will appear when loading a save game that included this mod, after the mod has been uninstalled.
+Due to some refactoring of the XMLs, games saved using the initial v1.0 of the mod will produce some errors in the debug log (see examples below), but these can be safely ignored. Though you will lose the earlier Advanced Transport Pods research, and all already constructed pods. Error messages similar to the below examples will appear when loading a save game that included this mod, after the mod has been uninstalled.
 
 ```
 "Could not load reference to Verse.ResearchProjectDef named AdvancedTransportPod"
