@@ -1,40 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ThingDef[defName="PodLauncher"]/comps</xpath>
-		<value>
-			<li Class="CompProperties_AffectedByFacilities">
-				<linkableFacilities>
-					<li>SmallTransportPodI</li>
-					<li>TransportPod</li>
-					<li>AdvancedTransportPodI</li>
-					<li>AdvancedTransportPodII</li>
-					<li>AdvancedTransportPodIII</li>
-				</linkableFacilities>
-			</li>
-		</value>
-	</Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="PodLauncher"]/comps</xpath>
+    <value>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>SmallTransportPodI</li>
+          <li>TransportPod</li>
+          <li>AdvancedTransportPodI</li>
+          <li>AdvancedTransportPodII</li>
+          <li>AdvancedTransportPodIII</li>
+        </linkableFacilities>
+      </li>
+    </value>
+  </Operation>
 
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef[defName="TransportPod"]/label</xpath>
-		<value>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="TransportPod"]/label</xpath>
+    <value>
       <label>transport pod 150</label>
-		</value>
-	</Operation>
+    </value>
+  </Operation>
 
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ThingDef[defName="TransportPod"]</xpath>
-		<value>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="TransportPod"]</xpath>
+    <value>
       <designatorDropdown>TransportPods</designatorDropdown>
-		</value>
-	</Operation>
+    </value>
+  </Operation>
 
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/ThingDef[defName="PodLauncher"]</xpath>
-		<value>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="PodLauncher"]</xpath>
+    <value>
       <designatorDropdown>PodLaunchers</designatorDropdown>
-		</value>
-	</Operation>
+    </value>
+  </Operation>
 
 </Patch>
