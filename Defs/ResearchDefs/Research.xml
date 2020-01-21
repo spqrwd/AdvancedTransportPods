@@ -18,7 +18,7 @@
   <ResearchProjectDef>
     <defName>AdvancedTransportPods</defName>
     <label>advanced transport pods</label>
-    <description>Construct more advanced versions of the launchable sub-orbital cargo pod with even greater capacities. Can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</description>
+    <description>Construct a more advanced version of the Pod laucnher, and new cargo pods with even greater capacities. Pods can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</description>
     <baseCost>3000</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>

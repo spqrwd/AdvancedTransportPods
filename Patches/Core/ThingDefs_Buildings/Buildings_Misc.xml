@@ -16,6 +16,13 @@
     </value>
   </Operation>
 
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="PodLauncher"]</xpath>
+    <value>
+      <designatorDropdown>PodLaunchers</designatorDropdown>
+    </value>
+  </Operation>
+
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ThingDef[defName="TransportPod"]/label</xpath>
     <value>
@@ -24,16 +31,16 @@
   </Operation>
 
   <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/ThingDef[defName="TransportPod"]</xpath>
+    <xpath>/Defs/ThingDef[defName="TransportPod"]/comps</xpath>
     <value>
-      <designatorDropdown>TransportPods</designatorDropdown>
+      <li Class="CompProperties_Facility" />
     </value>
   </Operation>
 
   <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/ThingDef[defName="PodLauncher"]</xpath>
+    <xpath>/Defs/ThingDef[defName="TransportPod"]</xpath>
     <value>
-      <designatorDropdown>PodLaunchers</designatorDropdown>
+      <designatorDropdown>TransportPods</designatorDropdown>
     </value>
   </Operation>
 

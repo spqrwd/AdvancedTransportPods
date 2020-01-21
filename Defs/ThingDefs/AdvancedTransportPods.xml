@@ -54,6 +54,7 @@
         <massCapacity>50</massCapacity>
       </li>
       <li Class="CompProperties_Launchable" />
+      <li Class="CompProperties_Facility" />
     </comps>
     <researchPrerequisites>
       <li>TransportPod</li>
@@ -86,6 +87,7 @@
         <massCapacity>275</massCapacity>
       </li>
       <li Class="CompProperties_Launchable" />
+      <li Class="CompProperties_Facility" />
     </comps>
     <researchPrerequisites>
       <li>LargeTransportPod</li>
@@ -118,6 +120,7 @@
         <massCapacity>400</massCapacity>
       </li>
       <li Class="CompProperties_Launchable" />
+      <li Class="CompProperties_Facility" />
     </comps>
     <researchPrerequisites>
       <li>AdvancedTransportPods</li>
@@ -150,6 +153,7 @@
         <massCapacity>525</massCapacity>
       </li>
       <li Class="CompProperties_Launchable" />
+      <li Class="CompProperties_Facility" />
     </comps>
     <researchPrerequisites>
       <li>AdvancedTransportPods</li>
