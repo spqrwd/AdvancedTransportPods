@@ -1,0 +1,45 @@
+<!-- Patch for the small pod in Fuel Economy.
+Rename the pod and move it to the same pull-down menu as everything else.
+Also increased capacity from 20 to 30, and lowered constuction skill requirement from 6 to 4. -->
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Fuel Economy</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="TransportPodSmall"]/label</xpath>
+          <value>
+            <label>transport pod 30</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="TransportPodSmall"]/constructionSkillPrerequisite</xpath>
+          <value>
+            <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="TransportPodSmall"]/comps/li[@Class="CompProperties_Transporter"]/massCapacity</xpath>
+          <value>
+            <massCapacity>30</massCapacity>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="TransportPodSmall"]</xpath>
+          <value>
+            <designatorDropdown>TransportPods</designatorDropdown>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="TransportPodSmall"]/comps</xpath>
+          <value>
+            <li Class="CompProperties_Facility" />
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>
