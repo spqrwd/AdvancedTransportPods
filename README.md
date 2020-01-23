@@ -13,6 +13,7 @@ Transport pod 50
 Research needed: "Transport pod"  
 Construction skill needed: 5  
 Construction requirements:
+
 - 25 Steel
 
 Transport pod 275
@@ -20,6 +21,7 @@ Transport pod 275
 Research needed: "Large transport pod"  
 Construction skill needed: 7  
 Construction requirements:
+
 - 90 Steel
 - 5 Plasteel
 - 1 Component
@@ -29,6 +31,7 @@ Transport pod 400 / 525
 Research needed: "Advanced transport pods"  
 Construction skill needed: 8  
 Construction requirements:
+
 - 130 / 160 Steel
 - 10 / 20 Plasteel
 - 2 Components
@@ -38,6 +41,7 @@ Pod launcher MKII
 Research needed: "Advanced transport pods"  
 Construction skill needed: 7  
 Construction requirements:
+
 - 60 Steel
 - 5 Plasteel
 - 2 Components
