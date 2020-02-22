@@ -24,7 +24,7 @@
         <designatorDropdown>TransportPods</designatorDropdown>
         <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
         <inspectorTabs>
-            <li>ITab_TransporterContents</li>
+            <li>ITab_ContentsTransporter</li>
         </inspectorTabs>
         <placeWorkers>
             <li>PlaceWorker_NeedsFuelingPort</li>
@@ -211,6 +211,7 @@
                 <showFuelGizmo>true</showFuelGizmo>
                 <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
                 <drawFuelGaugeInMap>true</drawFuelGaugeInMap>
+                <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
             </li>
             <li Class="CompProperties_AffectedByFacilities">
                 <linkableFacilities>
