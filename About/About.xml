@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-    <name>Advanced Transport Pods</name>
-    <author>crewd</author>
-    <packageId>crewd.AdvancedTransportPods</packageId>
-    <supportedVersions>
-        <li>1.0</li>
-        <li>1.1</li>
-        <li>1.2</li>
-   </supportedVersions>
-   <description>Advanced Transport Pods (ATP) v1.4.0
+  <name>Advanced Transport Pods</name>
+  <author>crewd</author>
+  <packageId>crewd.AdvancedTransportPods</packageId>
+  <supportedVersions>
+    <li>1.0</li>
+    <li>1.1</li>
+    <li>1.2</li>
+  </supportedVersions>
+  <description>Advanced Transport Pods (ATP) v1.4.0
 
 Adds an improved pod launcher with higher fuel capacity (666), and new versions (50/275/400/525 kg) of the vanilla transport pod (150 kg) to the game, with additional research options to unlock them.</description>
 </ModMetaData>

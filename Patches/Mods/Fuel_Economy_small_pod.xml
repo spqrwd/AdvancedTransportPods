@@ -1,7 +1,13 @@
-<!-- Patch for the small pod in Uuugggg's Fuel Economy mod.
-Renames the pod and moves it to the same pull-down menu as the others, and adds it to the launchers' UI.
-Also increases the capacity from 20 to 30, and lowers construction skill requirement from 6 to 4. -->
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+  Patch for the small pod in Uuugggg's Fuel Economy mod.
+  Renames the pod and moves it to the same pull-down menu as the others, and adds it to the launchers' UI.
+  Also increases the capacity from 20 to 30, and lowers construction skill requirement from 6 to 4.
+-->
+
 <Patch>
+
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Fuel Economy</li>
@@ -9,36 +15,42 @@ Also increases the capacity from 20 to 30, and lowers construction skill require
     <match Class="PatchOperationSequence">
       <success>Always</success>
       <operations>
+
         <li Class="PatchOperationReplace">
           <xpath>/Defs/ThingDef[defName="TransportPodSmall"]/label</xpath>
           <value>
             <label>transport pod 30</label>
           </value>
         </li>
+
         <li Class="PatchOperationReplace">
           <xpath>/Defs/ThingDef[defName="TransportPodSmall"]/constructionSkillPrerequisite</xpath>
           <value>
             <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
           </value>
         </li>
+
         <li Class="PatchOperationReplace">
           <xpath>/Defs/ThingDef[defName="TransportPodSmall"]/comps/li[@Class="CompProperties_Transporter"]/massCapacity</xpath>
           <value>
             <massCapacity>30</massCapacity>
           </value>
         </li>
+
         <li Class="PatchOperationAdd">
           <xpath>/Defs/ThingDef[defName="TransportPodSmall"]</xpath>
           <value>
             <designatorDropdown>TransportPods</designatorDropdown>
           </value>
         </li>
+
         <li Class="PatchOperationAdd">
           <xpath>/Defs/ThingDef[defName="TransportPodSmall"]/comps</xpath>
           <value>
             <li Class="CompProperties_Facility" />
           </value>
         </li>
+
         <li Class="PatchOperationAdd">
           <xpath>/Defs/ThingDef[defName="PodLauncherMKII"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
           <order>Prepend</order>
@@ -46,6 +58,7 @@ Also increases the capacity from 20 to 30, and lowers construction skill require
             <li>TransportPodSmall</li>
           </value>
         </li>
+
         <li Class="PatchOperationAdd">
           <xpath>/Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
           <order>Prepend</order>
@@ -53,7 +66,9 @@ Also increases the capacity from 20 to 30, and lowers construction skill require
             <li>TransportPodSmall</li>
           </value>
         </li>
+
       </operations>
     </match>
   </Operation>
+
 </Patch>
