@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Rimefeller</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+
+        <!-- Add support for the Rimefeller pipe -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="PodLauncherMKII"]/comps</xpath>
+          <value>
+            <li Class="Rimefeller.CompProperties_Pipe"/>
+          </value>
+        </li>
+
+        <!-- Required for the automatic fueling to work -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="PodLauncherMKII"]</xpath>
+          <value>
+            <tickerType>Normal</tickerType>
+          </value>
+        </li>
+
+        </operations>
+    </match>
+  </Operation>
+
+</Patch>

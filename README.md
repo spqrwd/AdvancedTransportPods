@@ -8,43 +8,59 @@ In addition to the vanilla pod (with 150 kg capacity) there is a smaller variant
 
 The Advanced transport pods research also unlocks a new pod launcher with more hitpoints (doubled to 400), and greater fuel capacity (666) than the vanilla one (150), significantly extending its maximum range. Both launchers can be found from a drop-down list under one icon in the Misc items category. In addition, the pod construction templates have been linked to both launchers allowing to quickly and easily build new pods directly from the launcher (no need to browse the Architect menu).
 
-**Transport pod 50**
+### Transport pod 50
 
-Research needed: "Transport pod"  
-Construction skill needed: 5  
+```
+Research needed: "Transport pod"
+Construction skill needed: 5
 Construction requirements:
 
 - 25 Steel
+```
 
-**Transport pod 275**
+### Transport pod 275
 
-Research needed: "Large transport pod"  
-Construction skill needed: 7  
+```
+Research needed: "Large transport pod"
+Construction skill needed: 7
 Construction requirements:
 
 - 90 Steel
 - 5 Plasteel
 - 1 Component
+```
 
-**Transport pod 400 / 525**
+### Transport pod 400 / 525
 
-Research needed: "Advanced transport pods"  
-Construction skill needed: 8  
+```
+Research needed: "Advanced transport pods"
+Construction skill needed: 8
 Construction requirements:
 
 - 130 / 160 Steel
 - 10 / 20 Plasteel
 - 2 Components
+```
 
-**Pod launcher MKII**
+### Pod launcher MKII
 
-Research needed: "Advanced transport pods"  
-Construction skill needed: 7  
+```
+Research needed: "Advanced transport pods"
+Construction skill needed: 7
 Construction requirements:
 
-- 60 Steel
-- 5 Plasteel
-- 2 Components
+- 65 Steel
+- 10 Plasteel
+- 1 Advanced Component
+```
+
+## Updates
+
+`v1.5.0 (Rimworld 1.1+ only)`
+
+- Added Rimefeller automatic refuel support to the MKII pod launcher. You may have to adjust the target fuel level once after construction for it to work correctly.
+- Prevented the "linked facility" visual indicators from appearing between pods and launchers.
+- Adjusted construction requirements of the MKII pod launcher.
 
 ## Known Issues
 

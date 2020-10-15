@@ -30,6 +30,12 @@
       <li>PlaceWorker_NeedsFuelingPort</li>
       <li>PlaceWorker_NotUnderRoof</li>
     </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Launchable" />
+      <li Class="CompProperties_Facility">
+        <maxSimultaneous>0</maxSimultaneous>
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef Name="SmallTransportPod50" ParentName="AdvTransportPodsBase">
@@ -53,8 +59,6 @@
         <restEffectiveness>0.8</restEffectiveness>
         <massCapacity>50</massCapacity>
       </li>
-      <li Class="CompProperties_Launchable" />
-      <li Class="CompProperties_Facility" />
     </comps>
     <researchPrerequisites>
       <li>TransportPod</li>
@@ -86,8 +90,6 @@
         <restEffectiveness>0.8</restEffectiveness>
         <massCapacity>275</massCapacity>
       </li>
-      <li Class="CompProperties_Launchable" />
-      <li Class="CompProperties_Facility" />
     </comps>
     <researchPrerequisites>
       <li>LargeTransportPod</li>
@@ -119,8 +121,6 @@
         <restEffectiveness>0.8</restEffectiveness>
         <massCapacity>400</massCapacity>
       </li>
-      <li Class="CompProperties_Launchable" />
-      <li Class="CompProperties_Facility" />
     </comps>
     <researchPrerequisites>
       <li>AdvancedTransportPods</li>
@@ -152,8 +152,6 @@
         <restEffectiveness>0.8</restEffectiveness>
         <massCapacity>525</massCapacity>
       </li>
-      <li Class="CompProperties_Launchable" />
-      <li Class="CompProperties_Facility" />
     </comps>
     <researchPrerequisites>
       <li>AdvancedTransportPods</li>
@@ -190,11 +188,12 @@
       <MaxHitPoints>400</MaxHitPoints>
       <WorkToBuild>5000</WorkToBuild>
       <Flammability>0.85</Flammability>
+      <Mass>100</Mass>
     </statBases>
     <costList>
-      <Steel>60</Steel>
-      <Plasteel>5</Plasteel>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>65</Steel>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>1</ComponentSpacer>
     </costList>
     <comps>
       <li Class="CompProperties_Refuelable">
