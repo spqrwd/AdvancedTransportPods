@@ -9,13 +9,14 @@
     <li>1.2</li>
     <li>1.3</li>
     <li>1.4</li>
+    <li>1.5</li>
   </supportedVersions>
-  <description>Advanced Transport Pods (ATP) v1.5.2
+  <description>Advanced Transport Pods (ATP) v1.5.3
 
 Adds an improved pod launcher with higher fuel capacity (666), and new versions (50/275/400/525 kg) of the vanilla transport pod (150 kg) to the game, with additional research options to unlock them.
 
-The improved pod launcher now supports Rimefeller for automatic refueling (Rimworld 1.1+ only).
+The improved pod launcher now supports Rimefeller for automatic refueling (RimWorld 1.1+ only).
 
-The mod will no longer get updates for previous Rimworld versions.</description>
+The mod will no longer get updates for previous RimWorld versions.</description>
 
 </ModMetaData>

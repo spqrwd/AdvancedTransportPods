@@ -1,8 +1,8 @@
-[![RimWorld 1.4](https://img.shields.io/badge/Rimworld-1.4-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/) [![RimWorld 1.3](https://img.shields.io/badge/Rimworld-1.3-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/) [![RimWorld 1.2](https://img.shields.io/badge/Rimworld-1.2-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/) [![RimWorld 1.1](https://img.shields.io/badge/Rimworld-1.1-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/) [![RimWorld 1.0](https://img.shields.io/badge/Rimworld-1.0-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/)
+[![RimWorld 1.5](https://img.shields.io/badge/Rimworld-1.5-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/) [![RimWorld 1.4](https://img.shields.io/badge/Rimworld-1.4-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/) [![RimWorld 1.3](https://img.shields.io/badge/Rimworld-1.3-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/) [![RimWorld 1.2](https://img.shields.io/badge/Rimworld-1.2-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/) [![RimWorld 1.1](https://img.shields.io/badge/Rimworld-1.1-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/) [![RimWorld 1.0](https://img.shields.io/badge/Rimworld-1.0-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/)
 
 # Advanced Transport Pods for RimWorld
 
-Adds a new pod launcher, and several new versions of the sub-orbital transport pod to the game. Supports Rimworld versions 1.0 through 1.4.
+Adds a new pod launcher, and several new versions of the sub-orbital transport pod to the game. Supports Rimworld versions 1.0 through 1.5.
 
 In addition to the vanilla pod (with 150 kg capacity) there is a smaller variant that can carry 50 kg, a large transport pod with a carrying capacity of 275 kg, and two more advanced versions with 400 & 525 kg capacities. All larger pods also require small amounts of plasteel for construction. All pods can now be found from a convenient drop-down list under one icon in the Misc items category, and the vanilla pod has been renamed to "Transport pod 150" to match with the naming scheme. Two new research options have been added for unlocking the larger variants.
 
@@ -56,15 +56,20 @@ Construction requirements:
 
 ## Updates
 
+`v1.5.3`
+
+- Updated for RimWorld 1.5
+- Added textures in DDS format
+
 `v1.5.2`
 
-- Updated for Rimworld 1.4
+- Updated for RimWorld 1.4
 
 `v1.5.1`
 
-- Updated for Rimworld 1.3
+- Updated for RimWorld 1.3
 
-`v1.5.0 (Rimworld 1.1+ only)`
+`v1.5.0 (RimWorld 1.1+ only)`
 
 - Added Rimefeller automatic refuel support to the MKII pod launcher. You may have to adjust the target fuel level once after construction for it to work correctly.
 - Prevented the "linked facility" visual indicators from appearing between pods and launchers.

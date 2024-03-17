@@ -23,8 +23,10 @@
     <techLevel>Industrial</techLevel>
     <prerequisites>
       <li>LargeTransportPod</li>
-      <li>MultiAnalyzer</li>
     </prerequisites>
+    <hiddenPrerequisites>
+      <li>MultiAnalyzer</li>
+    </hiddenPrerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>MultiAnalyzer</li>
