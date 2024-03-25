@@ -1,6 +1,8 @@
 [![RimWorld 1.5](https://img.shields.io/badge/Rimworld-1.5-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/) [![RimWorld 1.4](https://img.shields.io/badge/Rimworld-1.4-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/) [![RimWorld 1.3](https://img.shields.io/badge/Rimworld-1.3-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/) [![RimWorld 1.2](https://img.shields.io/badge/Rimworld-1.2-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/) [![RimWorld 1.1](https://img.shields.io/badge/Rimworld-1.1-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/) [![RimWorld 1.0](https://img.shields.io/badge/Rimworld-1.0-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/)
 
-# Advanced Transport Pods for RimWorld
+# Advanced Transport Pods (Legacy) for RimWorld
+
+Note: This is the original version of the mod, and will no longer be updated.
 
 Adds a new pod launcher, and several new versions of the sub-orbital transport pod to the game. Supports Rimworld versions 1.0 through 1.5.
 

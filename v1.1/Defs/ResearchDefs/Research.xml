@@ -11,8 +11,8 @@
       <li>TransportPod</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-    <researchViewX>12.00</researchViewX>
-    <researchViewY>3.30</researchViewY>
+    <researchViewX>13.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -30,7 +30,7 @@
       <li>MultiAnalyzer</li>
     </requiredResearchFacilities>
     <researchViewX>14.00</researchViewX>
-    <researchViewY>4.30</researchViewY>
+    <researchViewY>0.00</researchViewY>
   </ResearchProjectDef>
 
 </Defs>

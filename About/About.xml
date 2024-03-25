@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Advanced Transport Pods</name>
+  <name>Advanced Transport Pods (Legacy)</name>
   <author>crewd</author>
   <packageId>crewd.AdvancedTransportPods</packageId>
+  <url>https://steamcommunity.com/workshop/filedetails/?id=1557737647</url>
   <supportedVersions>
     <li>1.0</li>
     <li>1.1</li>
@@ -11,12 +12,15 @@
     <li>1.4</li>
     <li>1.5</li>
   </supportedVersions>
-  <description>Advanced Transport Pods (ATP) v1.5.3
+  <description>Advanced Transport Pods Legacy (ATPL) v1.5.4
 
 Adds an improved pod launcher with higher fuel capacity (666), and new versions (50/275/400/525 kg) of the vanilla transport pod (150 kg) to the game, with additional research options to unlock them.
 
 The improved pod launcher now supports Rimefeller for automatic refueling (RimWorld 1.1+ only).
 
-The mod will no longer get updates for previous RimWorld versions.</description>
+The version 1 of this mod is now deprecated and will not be updated anymore in the future.
+
+Version 2 is available in the Steam Workshop at https://steamcommunity.com/sharedfiles/filedetails/?id=3205648859
+</description>
 
 </ModMetaData>
