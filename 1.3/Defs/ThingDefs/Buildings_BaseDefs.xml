@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============================== Pod Launchers Abstract =============================== -->
+
+  <ThingDef Abstract="True" Name="AdvTransportPodLauncherParentBase" ParentName="BuildingBase">
+  </ThingDef>
+
+  <!-- ========================== Advanced Transport Pod Abstract ========================== -->
+
+  <ThingDef Abstract="True" Name="AdvTransportPodParentBase" ParentName="BuildingBase">
+  </ThingDef>
+
+</Defs>

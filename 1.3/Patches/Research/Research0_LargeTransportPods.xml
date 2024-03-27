@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>crewd.AdvancedTransportPods</modId>
+    <key>LargeTransportPodsOn</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+
+      <Operation Class="PatchOperationSequence">
+        <success>Normal</success>
+        <operations>
+
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <ResearchProjectDef>
+                <defName>LargeTransportPods</defName>
+                <label>large transport pods</label>
+                <description>Construct larger, more efficient versions of the launchable sub-orbital cargo pod. Can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</description>
+                <baseCost>1500</baseCost>
+                <techLevel>Industrial</techLevel>
+                <prerequisites>
+                  <li>TransportPod</li>
+                </prerequisites>
+                <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+                <researchViewX>13.00</researchViewX>
+                <researchViewY>0.00</researchViewY>
+              </ResearchProjectDef>
+            </value>
+          </li>
+
+        </operations>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+</Patch>

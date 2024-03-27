@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>crewd.AdvancedTransportPods</modId>
+    <key>LargeTransportPodsOn</key>
+    <defaultValue>true</defaultValue>
+    <caseTrue>
+
+      <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>crewd.AdvancedTransportPods</modId>
+        <key>AdvTransportPod250On</key>
+        <defaultValue>true</defaultValue>
+        <caseTrue>
+
+          <Operation Class="XmlExtensions.UseSettings">
+            <modId>crewd.AdvancedTransportPods</modId>
+            <keys>
+              <li>pod250MassCapacity</li>
+              <li>pod250CostOfSteel</li>
+              <li>pod250CostOfComponentIndustrial</li>
+            </keys>
+            <defaultValues>
+              <li>250</li>
+              <li>95</li>
+              <li>1</li>
+            </defaultValues>
+            <apply>
+
+              <Operation Class="PatchOperationSequence">
+                <success>Normal</success>
+                <operations>
+
+                  <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                      <ThingDef ParentName="AdvTransportPodBase">
+                        <defName>AdvTransportPod250M</defName>
+                        <label>transport pod {pod250MassCapacity}</label>
+                        <graphicData>
+                          <texPath>AdvancedTransportPodA1</texPath>
+                          <graphicClass>Graphic_Single</graphicClass>
+                          <drawSize>(2.15,2.15)</drawSize>
+                        </graphicData>
+                        <statBases>
+                          <MaxHitPoints>250</MaxHitPoints>
+                          <WorkToBuild>3200</WorkToBuild>
+                          <Flammability>0.5</Flammability>
+                        </statBases>
+                        <costList>
+                          <Steel>{pod250CostOfSteel}</Steel>
+                          <ComponentIndustrial>{pod250CostOfComponentIndustrial}</ComponentIndustrial>
+                        </costList>
+                        <comps>
+                          <li Class="CompProperties_Transporter">
+                            <restEffectiveness>0.8</restEffectiveness>
+                            <massCapacity>{pod250MassCapacity}</massCapacity>
+                          </li>
+                        </comps>
+                        <researchPrerequisites>
+                          <li>LargeTransportPods</li>
+                        </researchPrerequisites>
+                        <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+                      </ThingDef>
+                    </value>
+                  </li>
+
+                  <!-- Vanilla Pod Launcher -->
+
+                  <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                      <xpath>/Defs/ThingDef[defName="PodLauncher"]/comps</xpath>
+                      <value>
+                        <li Class="CompProperties_AffectedByFacilities">
+                          <linkableFacilities />
+                        </li>
+                      </value>
+                    </nomatch>
+                  </li>
+
+                  <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+                    <order>Prepend</order>
+                    <value>
+                      <li>AdvTransportPod250M</li>
+                    </value>
+                  </li>
+
+                  <!-- Advanced Pod Launcher -->
+
+                  <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="PodLauncherMKII"]</xpath>
+                    <match Class="PatchOperationAdd">
+                      <xpath>/Defs/ThingDef[@Name="AdvTransportPodLauncherBase"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+                      <order>Prepend</order>
+                      <value>
+                        <li>AdvTransportPod250M</li>
+                      </value>
+                    </match>
+                  </li>
+
+                </operations>
+              </Operation>
+
+            </apply>
+          </Operation>
+
+        </caseTrue>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+</Patch>

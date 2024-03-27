@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DesignatorDropdownGroupDef>
+    <defName>PodLaunchers</defName>
+  </DesignatorDropdownGroupDef>
+
+  <!-- =============================== Pod Launcher Abstract =============================== -->
+
+  <ThingDef Abstract="True" Name="AdvTransportPodLauncherBase" ParentName="AdvTransportPodLauncherParentBase">
+    <description>An advanced fueling port for launching one transport pod. Pod launchers can launch as a group - but the launchers must be placed adjacent to each other.</description>
+    <thingClass>Building_PodLauncher</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <rotatable>true</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1.0</fillPercent>
+    <designationCategory>Misc</designationCategory>
+    <designatorDropdown>PodLaunchers</designatorDropdown>
+    <canOverlapZones>false</canOverlapZones>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <building>
+      <hasFuelingPort>true</hasFuelingPort>
+    </building>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities/>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_FuelingPort</li>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <uiIconScale>0.9</uiIconScale>
+  </ThingDef>
+
+</Defs>

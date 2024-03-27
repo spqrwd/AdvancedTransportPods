@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <XmlExtensions.SettingsMenuDef>
+    <defName>AdvancedTransportPodsSettings</defName>
+    <modId>crewd.AdvancedTransportPods</modId>
+    <label>Advanced Transport Pods</label>
+    <settings>
+
+      <li Class="XmlExtensions.Setting.SetColor">
+        <color>(255,50,50)</color>
+      </li>
+      <li Class="XmlExtensions.Setting.Text">
+        <text>For any changes to take effect the game must be restarted!</text>
+        <font>Medium</font>
+        <anchor>Middle</anchor>
+        <tKey>AdvancedTransportPodsWarning</tKey>
+      </li>
+      <li Class="XmlExtensions.Setting.SetColor"/>
+      <li Class="XmlExtensions.Setting.GapLine"/>
+
+      <!-- Pod Launchers -->
+
+      <li Class="XmlExtensions.Setting.Text">
+        <text>Settings for Pod Launchers</text>
+        <font>Medium</font>
+        <anchor>Middle</anchor>
+        <tKey>PodLaunchersSettingsTitle</tKey>
+      </li>
+      <li Class="XmlExtensions.Setting.GapLine"/>
+
+      <!-- Vanilla Pod Launcher -->
+
+      <li Class="XmlExtensions.Setting.Checkbox">
+        <label>Vanilla Pod Launcher Custom Settings</label>
+        <key>VanillaPodLauncherSettingsOn</key>
+        <defaultValue>False</defaultValue>
+        <tKey>VanillaPodLauncherSettingsTitle</tKey>
+      </li>
+      <li Class="XmlExtensions.Setting.ToggleableSettings">
+        <key>VanillaPodLauncherSettingsOn</key>
+
+        <caseFalse>
+          <li Class="XmlExtensions.Setting.SetColor">
+            <color>(163,177,188)</color>
+          </li>
+          <li Class="XmlExtensions.Setting.Text">
+            <text>This setting does not disable the vanilla Pod Launcher, but enables you to change some of its attributes.</text>
+            <tKey>VanillaPodLauncherSettingsOnDesc</tKey>
+          </li>
+          <li Class="XmlExtensions.Setting.SetColor"/>
+        </caseFalse>
+
+        <caseTrue>
+          <li Class="XmlExtensions.Setting.SetColor">
+            <color>(163,177,188)</color>
+          </li>
+          <li Class="XmlExtensions.Setting.Slider">
+            <key>vanillaPodLauncherFuelCapacity</key>
+            <defaultValue>150</defaultValue>
+            <min>1</min>
+            <max>300</max>
+            <decimals>0</decimals>
+            <label>Maximum fuel capacity: {vanillaPodLauncherFuelCapacity}  (default: 150)</label>
+            <tKey>VanillaPodLauncherSettingsFuelCapacity</tKey>
+          </li>
+          <li Class="XmlExtensions.Setting.SetColor"/>
+          <li Class="XmlExtensions.Setting.SetColor">
+            <color>(163,177,188)</color>
+          </li>
+          <li Class="XmlExtensions.Setting.Text">
+            <text>Adjust the maximum fuel capacity for the Vanilla Pod Launcher.</text>
+            <tKey>VanillaPodLauncherSettingsFuelCapacityDesc</tKey>
+          </li>
+          <li Class="XmlExtensions.Setting.SetColor"/>
+        </caseTrue>
+      </li>
+      <li Class="XmlExtensions.Setting.GapLine">
+        <spacing>24</spacing>
+      </li>
+
+      <!-- Advanced Pod Launcher -->
+
+      <li Class="XmlExtensions.Setting.Checkbox">
+        <label>Advanced Pod Launcher</label>
+        <key>AdvancedPodLauncherOn</key>
+        <defaultValue>True</defaultValue>
+        <tKey>AdvancedPodLauncherSettingsTitle</tKey>
+      </li>
+      <li Class="XmlExtensions.Setting.ToggleableSettings">
+        <key>AdvancedPodLauncherOn</key>
+
+        <caseFalse>
+          <li Class="XmlExtensions.Setting.SetColor">
+            <color>(163,177,188)</color>
+          </li>
+          <li Class="XmlExtensions.Setting.Text">
+            <text>Enables the research and construction of the advanced version of the Pod Launcher.</text>
+            <tKey>AdvancedPodLauncherOnDesc</tKey>
+          </li>
+          <li Class="XmlExtensions.Setting.SetColor"/>
+        </caseFalse>
+
+        <caseTrue>
+          <li Class="XmlExtensions.Setting.SetColor">
+            <color>(163,177,188)</color>
+          </li>
+          <li Class="XmlExtensions.Setting.Slider">
+            <key>advancedPodLauncherFuelCapacity</key>
+            <defaultValue>300</defaultValue>
+            <min>150</min>
+            <max>2000</max>
+            <decimals>0</decimals>
+            <label>Maximum fuel capacity: {advancedPodLauncherFuelCapacity}  (default: 300)</label>
+            <tKey>AdvancedPodLauncherSettingsFuelCapacity</tKey>
+          </li>
+          <li Class="XmlExtensions.Setting.SetColor"/>
+          <li Class="XmlExtensions.Setting.SetColor">
+            <color>(163,177,188)</color>
+          </li>
+          <li Class="XmlExtensions.Setting.Text">
+            <text>Adjust the maximum fuel capacity for the Advanced Pod Launcher.</text>
+            <tKey>AdvancedPodLauncherSettingsFuelCapacityDesc</tKey>
+          </li>
+          <li Class="XmlExtensions.Setting.SetColor"/>
+        </caseTrue>
+      </li>
+      <li Class="XmlExtensions.Setting.GapLine">
+        <spacing>24</spacing>
+      </li>
+
+      <!-- Transport Pods -->
+
+      <li Class="XmlExtensions.Setting.Text">
+        <text>Settings for Transport Pods</text>
+        <font>Medium</font>
+        <anchor>Middle</anchor>
+        <tKey>AdvancedTransportPodsSettingsTitle</tKey>
+      </li>
+      <li Class="XmlExtensions.Setting.GapLine"/>
+
+      <!-- Advanced Transport Pod 50 -->
+
+      <li Class="XmlExtensions.Setting.Checkbox">
+        <label>Transport Pod 50</label>
+        <key>AdvTransportPod50On</key>
+        <defaultValue>True</defaultValue>
+        <tKey>AdvancedTransportPod50Title</tKey>
+      </li>
+      <li Class="XmlExtensions.Setting.ToggleableSettings">
+        <key>AdvTransportPod50On</key>
+
+        <caseFalse>
+          <li Class="XmlExtensions.Setting.SetColor">
+            <color>(163,177,188)</color>
+          </li>
+          <li Class="XmlExtensions.Setting.Text">
+            <text>Enables the small Transport Pod 50</text>
+            <tKey>AdvancedTransportPod50OnDesc</tKey>
+          </li>
+          <li Class="XmlExtensions.Setting.SetColor"/>
+        </caseFalse>
+
+        <caseTrue>
+          <li Class="XmlExtensions.Setting.SetColor">
+            <color>(163,177,188)</color>
+          </li>
+          <li Class="XmlExtensions.Setting.Slider">
+            <key>pod50MassCapacity</key>
+            <defaultValue>50</defaultValue>
+            <min>10</min>
+            <max>75</max>
+            <decimals>0</decimals>
+            <label>Maximum mass capacity:  {pod50MassCapacity}  (default: 50)</label>
+            <tKey>AdvancedTransportPod50MassCapacity</tKey>
+          </li>
+          <li Class="XmlExtensions.Setting.SetColor"/>
+          <li Class="XmlExtensions.Setting.SetColor">
+            <color>(163,177,188)</color>
+          </li>
+          <li Class="XmlExtensions.Setting.Numeric">
+            <key>pod50CostOfSteel</key>
+            <defaultValue>25</defaultValue>
+            <min>1</min>
+            <max>35</max>
+            <label>Requires Steel  (default: 25)</label>
+            <tKey>AdvancedTransportPod50CostOfSteel</tKey>
+          </li>
+          <li Class="XmlExtensions.Setting.SetColor"/>
+        </caseTrue>
+      </li>
+      <li Class="XmlExtensions.Setting.GapLine">
+        <spacing>24</spacing>
+      </li>
+
+      <!-- Large Transport Pods -->
+
+      <li Class="XmlExtensions.Setting.Section">
+        <settings>
+          <li Class="XmlExtensions.Setting.Checkbox">
+            <label>Large Transport Pods</label>
+            <key>LargeTransportPodsOn</key>
+            <defaultValue>True</defaultValue>
+            <tKey>LargeTransportPodsOnTitle</tKey>
+          </li>
+          <li Class="XmlExtensions.Setting.GapLine">
+            <spacing>12</spacing>
+          </li>
+          <li Class="XmlExtensions.Setting.ToggleableSettings">
+            <key>LargeTransportPodsOn</key>
+
+            <caseFalse>
+              <li Class="XmlExtensions.Setting.SetColor">
+                <color>(163,177,188)</color>
+              </li>
+              <li Class="XmlExtensions.Setting.Text">
+                <text>Enables the research and construction of Large Transport Pods</text>
+                <tKey>LargeTransportPodsOnDesc</tKey>
+              </li>
+              <li Class="XmlExtensions.Setting.SetColor"/>
+            </caseFalse>
+
+            <caseTrue>
+
+              <!-- Advanced Transport Pod 200 -->
+
+              <li Class="XmlExtensions.Setting.Checkbox">
+                <label>Large Transport Pod 200</label>
+                <key>AdvTransportPod200On</key>
+                <defaultValue>True</defaultValue>
+                <tKey>AdvancedTransportPod200Title</tKey>
+              </li>
+              <li Class="XmlExtensions.Setting.ToggleableSettings">
+                <key>AdvTransportPod200On</key>
+
+                <caseFalse>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Text">
+                    <text>Enables the Large Transport Pod 200</text>
+                    <tKey>AdvancedTransportPod200OnDesc</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                </caseFalse>
+
+                <caseTrue>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Slider">
+                    <key>pod200MassCapacity</key>
+                    <defaultValue>200</defaultValue>
+                    <min>150</min>
+                    <max>1000</max>
+                    <decimals>0</decimals>
+                    <label>Maximum mass capacity:  {pod200MassCapacity}  (default: 200)</label>
+                    <tKey>AdvancedTransportPod200MassCapacity</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Numeric">
+                    <key>pod200CostOfSteel</key>
+                    <defaultValue>85</defaultValue>
+                    <min>1</min>
+                    <max>999</max>
+                    <label>Requires Steel  (default: 85)</label>
+                    <tKey>AdvancedTransportPod200CostOfSteel</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Numeric">
+                    <key>pod200CostOfComponentIndustrial</key>
+                    <defaultValue>1</defaultValue>
+                    <min>1</min>
+                    <max>999</max>
+                    <label>Requires Components  (default: 1)</label>
+                    <tKey>AdvancedTransportPod200CostOfComponentIndustrial</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                </caseTrue>
+              </li>
+              <li Class="XmlExtensions.Setting.GapLine">
+                <spacing>24</spacing>
+              </li>
+
+              <!-- Advanced Transport Pod 250 -->
+
+              <li Class="XmlExtensions.Setting.Checkbox">
+                <label>Large Transport Pod 250</label>
+                <key>AdvTransportPod250On</key>
+                <defaultValue>True</defaultValue>
+                <tKey>AdvancedTransportPod250Title</tKey>
+              </li>
+              <li Class="XmlExtensions.Setting.ToggleableSettings">
+                <key>AdvTransportPod250On</key>
+
+                <caseFalse>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Text">
+                    <text>Enables the Large Transport Pod 250</text>
+                    <tKey>AdvancedTransportPod250OnDesc</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                </caseFalse>
+
+                <caseTrue>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Slider">
+                    <key>pod250MassCapacity</key>
+                    <defaultValue>250</defaultValue>
+                    <min>150</min>
+                    <max>1000</max>
+                    <decimals>0</decimals>
+                    <label>Maximum mass capacity:  {pod250MassCapacity}  (default: 250)</label>
+                    <tKey>AdvancedTransportPod250MassCapacity</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Numeric">
+                    <key>pod250CostOfSteel</key>
+                    <defaultValue>95</defaultValue>
+                    <min>1</min>
+                    <max>999</max>
+                    <label>Requires Steel  (default: 95)</label>
+                    <tKey>AdvancedTransportPod250CostOfSteel</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Numeric">
+                    <key>pod250CostOfComponentIndustrial</key>
+                    <defaultValue>1</defaultValue>
+                    <min>1</min>
+                    <max>999</max>
+                    <label>Requires Components  (default: 1)</label>
+                    <tKey>AdvancedTransportPod250CostOfComponentIndustrial</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                </caseTrue>
+              </li>
+
+            </caseTrue>
+          </li>
+        </settings>
+      </li>
+
+      <li Class="XmlExtensions.Setting.GapLine">
+        <spacing>24</spacing>
+      </li>
+
+      <!-- Advanced Transport Pods -->
+
+      <li Class="XmlExtensions.Setting.Section">
+        <settings>
+          <li Class="XmlExtensions.Setting.Checkbox">
+            <label>Advanced Transport Pods</label>
+            <key>AdvancedTransportPodsOn</key>
+            <defaultValue>True</defaultValue>
+            <tKey>AdvancedTransportPodsOnTitle</tKey>
+          </li>
+          <li Class="XmlExtensions.Setting.GapLine">
+            <spacing>12</spacing>
+          </li>
+          <li Class="XmlExtensions.Setting.ToggleableSettings">
+            <key>AdvancedTransportPodsOn</key>
+
+            <caseFalse>
+              <li Class="XmlExtensions.Setting.SetColor">
+                <color>(163,177,188)</color>
+              </li>
+              <li Class="XmlExtensions.Setting.Text">
+                <text>Enables the research and construction of Advanced Transport Pods</text>
+                <tKey>AdvancedTransportPodsOnDesc</tKey>
+              </li>
+              <li Class="XmlExtensions.Setting.SetColor"/>
+            </caseFalse>
+
+            <caseTrue>
+
+              <!-- Advanced Transport Pod 300 -->
+
+              <li Class="XmlExtensions.Setting.Checkbox">
+                <label>Advanced Transport Pod 300</label>
+                <key>AdvTransportPod300On</key>
+                <defaultValue>True</defaultValue>
+                <tKey>AdvancedTransportPod300Title</tKey>
+              </li>
+              <li Class="XmlExtensions.Setting.ToggleableSettings">
+                <key>AdvTransportPod300On</key>
+
+                <caseFalse>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Text">
+                    <text>Enables the Advanced Transport Pod 300</text>
+                    <tKey>AdvancedTransportPod300OnDesc</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                </caseFalse>
+
+                <caseTrue>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Slider">
+                    <key>pod300MassCapacity</key>
+                    <defaultValue>300</defaultValue>
+                    <min>150</min>
+                    <max>1000</max>
+                    <decimals>0</decimals>
+                    <label>Maximum mass capacity:  {pod300MassCapacity}  (default: 300)</label>
+                    <tKey>AdvancedTransportPod300MassCapacity</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Numeric">
+                    <key>pod300CostOfSteel</key>
+                    <defaultValue>100</defaultValue>
+                    <min>1</min>
+                    <max>999</max>
+                    <label>Requires Steel  (default: 100)</label>
+                    <tKey>AdvancedTransportPod300CostOfSteel</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Numeric">
+                    <key>pod300CostOfPlasteel</key>
+                    <defaultValue>10</defaultValue>
+                    <min>1</min>
+                    <max>999</max>
+                    <label>Requires Plasteel  (default: 10)</label>
+                    <tKey>AdvancedTransportPod300CostOfPlasteel</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Numeric">
+                    <key>pod300CostOfComponentIndustrial</key>
+                    <defaultValue>1</defaultValue>
+                    <min>1</min>
+                    <max>999</max>
+                    <label>Requires Components  (default: 1)</label>
+                    <tKey>AdvancedTransportPod300CostOfComponentIndustrial</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                </caseTrue>
+              </li>
+              <li Class="XmlExtensions.Setting.GapLine">
+                <spacing>24</spacing>
+              </li>
+
+              <!-- Advanced Transport Pod 400 -->
+
+              <li Class="XmlExtensions.Setting.Checkbox">
+                <label>Advanced Transport Pod 400</label>
+                <key>AdvTransportPod400On</key>
+                <defaultValue>False</defaultValue>
+                <tKey>AdvancedTransportPod400Title</tKey>
+              </li>
+              <li Class="XmlExtensions.Setting.ToggleableSettings">
+                <key>AdvTransportPod400On</key>
+
+                <caseFalse>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Text">
+                    <text>Enables the Advanced Transport Pod 400</text>
+                    <tKey>AdvancedTransportPod400OnDesc</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                </caseFalse>
+
+                <caseTrue>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Slider">
+                    <key>pod400MassCapacity</key>
+                    <defaultValue>400</defaultValue>
+                    <min>150</min>
+                    <max>1000</max>
+                    <decimals>0</decimals>
+                    <label>Maximum mass capacity:  {pod400MassCapacity}  (default: 400)</label>
+                    <tKey>AdvancedTransportPod400MassCapacity</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Numeric">
+                    <key>pod400CostOfSteel</key>
+                    <defaultValue>125</defaultValue>
+                    <min>1</min>
+                    <max>999</max>
+                    <label>Requires Steel  (default: 125)</label>
+                    <tKey>AdvancedTransportPod400CostOfSteel</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Numeric">
+                    <key>pod400CostOfPlasteel</key>
+                    <defaultValue>20</defaultValue>
+                    <min>1</min>
+                    <max>999</max>
+                    <label>Requires Plasteel  (default: 20)</label>
+                    <tKey>AdvancedTransportPod400CostOfPlasteel</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                  <li Class="XmlExtensions.Setting.SetColor">
+                    <color>(163,177,188)</color>
+                  </li>
+                  <li Class="XmlExtensions.Setting.Numeric">
+                    <key>pod400CostOfComponentIndustrial</key>
+                    <defaultValue>2</defaultValue>
+                    <min>1</min>
+                    <max>999</max>
+                    <label>Requires Components  (default: 2)</label>
+                    <tKey>AdvancedTransportPod400CostOfComponentIndustrial</tKey>
+                  </li>
+                  <li Class="XmlExtensions.Setting.SetColor"/>
+                </caseTrue>
+              </li>
+
+            </caseTrue>
+          </li>
+        </settings>
+      </li>
+
+      <li Class="XmlExtensions.Setting.GapLine">
+        <spacing>24</spacing>
+      </li>
+
+      <!-- Advanced Transport Pod 600 -->
+
+      <li Class="XmlExtensions.Setting.Checkbox">
+        <label>Super Transport Pod</label>
+        <key>AdvTransportPod600On</key>
+        <defaultValue>False</defaultValue>
+        <tKey>AdvancedTransportPod600Title</tKey>
+      </li>
+      <li Class="XmlExtensions.Setting.ToggleableSettings">
+        <key>AdvTransportPod600On</key>
+
+        <caseFalse>
+          <li Class="XmlExtensions.Setting.SetColor">
+            <color>(163,177,188)</color>
+          </li>
+          <li Class="XmlExtensions.Setting.Text">
+            <text>Enables the research and construction of the Super Transport Pod</text>
+            <tKey>AdvancedTransportPod600OnDesc</tKey>
+          </li>
+          <li Class="XmlExtensions.Setting.SetColor"/>
+        </caseFalse>
+
+        <caseTrue>
+          <li Class="XmlExtensions.Setting.SetColor">
+            <color>(163,177,188)</color>
+          </li>
+          <li Class="XmlExtensions.Setting.Numeric">
+            <key>pod600MassCapacity</key>
+            <defaultValue>600</defaultValue>
+            <min>1</min>
+            <max>999999</max>
+            <label>Maximum mass capacity  (default: 600)</label>
+            <tKey>AdvancedTransportPod600MassCapacity</tKey>
+          </li>
+          <li Class="XmlExtensions.Setting.SetColor"/>
+          <li Class="XmlExtensions.Setting.SetColor">
+            <color>(163,177,188)</color>
+          </li>
+          <li Class="XmlExtensions.Setting.Numeric">
+            <key>pod600CostOfSteel</key>
+            <defaultValue>225</defaultValue>
+            <min>1</min>
+            <max>9999</max>
+            <label>Requires Steel  (default: 225)</label>
+            <tKey>AdvancedTransportPod600CostOfSteel</tKey>
+          </li>
+          <li Class="XmlExtensions.Setting.SetColor"/>
+          <li Class="XmlExtensions.Setting.SetColor">
+            <color>(163,177,188)</color>
+          </li>
+          <li Class="XmlExtensions.Setting.Numeric">
+            <key>pod600CostOfUranium</key>
+            <defaultValue>15</defaultValue>
+            <min>1</min>
+            <max>9999</max>
+            <label>Requires Uranium  (default: 15)</label>
+            <tKey>AdvancedTransportPod600CostOfUranium</tKey>
+          </li>
+          <li Class="XmlExtensions.Setting.SetColor"/>
+          <li Class="XmlExtensions.Setting.SetColor">
+            <color>(163,177,188)</color>
+          </li>
+          <li Class="XmlExtensions.Setting.Numeric">
+            <key>pod600CostOfComponentSpacer</key>
+            <defaultValue>1</defaultValue>
+            <min>1</min>
+            <max>9999</max>
+            <label>Requires Advanced Components  (default: 1)</label>
+            <tKey>AdvancedTransportPod600CostOfComponentSpacer</tKey>
+          </li>
+          <li Class="XmlExtensions.Setting.SetColor"/>
+        </caseTrue>
+      </li>
+
+      <li Class="XmlExtensions.Setting.GapLine">
+        <spacing>24</spacing>
+      </li>
+      <li Class="XmlExtensions.Setting.ResetSettings"/>
+      <li Class="XmlExtensions.Setting.GapLine">
+        <spacing>24</spacing>
+      </li>
+
+    </settings>
+  </XmlExtensions.SettingsMenuDef>
+
+</Defs>

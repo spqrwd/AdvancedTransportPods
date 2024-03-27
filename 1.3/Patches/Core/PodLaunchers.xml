@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Vanilla Pod Launcher Settings -->
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>crewd.AdvancedTransportPods</modId>
+    <key>VanillaPodLauncherSettingsOn</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+
+      <Operation Class="XmlExtensions.AggregateValues">
+        <valueOperations>
+          <Operation Class="XmlExtensions.UseSetting">
+            <modId>crewd.AdvancedTransportPods</modId>
+            <key>vanillaPodLauncherFuelCapacity</key>
+            <defaultValue>150</defaultValue>
+          </Operation>
+          <Operation Class="XmlExtensions.CreateVariable">
+              <value>{vanillaPodLauncherFuelCapacity}</value>
+              <value2>0.5</value2>
+              <operation>*</operation>
+              <storeIn>vanillaPodLauncherInitialTargetFuelLevel</storeIn>
+          </Operation>
+        </valueOperations>
+        <apply>
+          <Operation Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
+            <value>
+              <fuelCapacity>{vanillaPodLauncherFuelCapacity}</fuelCapacity>
+            </value>
+          </Operation>
+          <Operation Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_Refuelable"]/initialConfigurableTargetFuelLevel</xpath>
+            <value>
+              <initialConfigurableTargetFuelLevel>{vanillaPodLauncherInitialTargetFuelLevel}</initialConfigurableTargetFuelLevel>
+            </value>
+          </Operation>
+        </apply>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- Advanced Pod Launcher -->
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>crewd.AdvancedTransportPods</modId>
+    <key>AdvancedPodLauncherOn</key>
+    <defaultValue>true</defaultValue>
+    <caseTrue>
+
+      <!-- Add the vanilla pod launcher to the dropdown menu -->
+
+      <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="PodLauncher"]</xpath>
+        <value>
+          <designatorDropdown>PodLaunchers</designatorDropdown>
+        </value>
+      </Operation>
+
+      <!-- Pod Launcher MKII -->
+
+      <Operation Class="XmlExtensions.AggregateValues">
+        <valueOperations>
+          <Operation Class="XmlExtensions.UseSettings">
+            <modId>crewd.AdvancedTransportPods</modId>
+            <keys>
+              <li>advancedPodLauncherFuelCapacity</li>
+            </keys>
+            <defaultValues>
+              <li>300</li>
+            </defaultValues>
+          </Operation>
+          <Operation Class="XmlExtensions.CreateVariable">
+            <value>{advancedPodLauncherFuelCapacity}</value>
+            <value2>0.5</value2>
+            <operation>*</operation>
+            <storeIn>advancedPodLauncherInitialTargetFuelLevel</storeIn>
+          </Operation>
+        </valueOperations>
+        <apply>
+
+          <Operation Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <ThingDef ParentName="AdvTransportPodLauncherBase">
+                <defName>PodLauncherMKII</defName>
+                <label>pod launcher MKII</label>
+                <graphicData>
+                  <texPath>PodLauncherMKII</texPath>
+                  <graphicClass>Graphic_Multi</graphicClass>
+                  <drawSize>(2,3)</drawSize>
+                </graphicData>
+                <size>(1,2)</size>
+                <statBases>
+                  <MaxHitPoints>400</MaxHitPoints>
+                  <WorkToBuild>5000</WorkToBuild>
+                  <Flammability>0.65</Flammability>
+                  <Mass>100</Mass>
+                </statBases>
+                <costList>
+                  <Steel>65</Steel>
+                  <Uranium>10</Uranium>
+                  <ComponentSpacer>1</ComponentSpacer>
+                </costList>
+                <comps>
+                  <li Class="CompProperties_Refuelable">
+                    <fuelCapacity>{advancedPodLauncherFuelCapacity}</fuelCapacity>
+                    <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+                    <initialConfigurableTargetFuelLevel>{advancedPodLauncherInitialTargetFuelLevel}</initialConfigurableTargetFuelLevel>
+                    <fuelFilter>
+                      <thingDefs>
+                        <li>Chemfuel</li>
+                      </thingDefs>
+                    </fuelFilter>
+                    <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+                    <autoRefuelPercent>1</autoRefuelPercent>
+                    <showFuelGizmo>true</showFuelGizmo>
+                    <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+                    <drawFuelGaugeInMap>true</drawFuelGaugeInMap>
+                    <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+                  </li>
+                </comps>
+                <researchPrerequisites>
+                  <li>AdvancedTransportPods</li>
+                </researchPrerequisites>
+              </ThingDef>
+            </value>
+          </Operation>
+
+        </apply>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+</Patch>

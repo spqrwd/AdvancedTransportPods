@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Fuel Economy</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Normal</success>
+      <operations>
+
+        <li Class="XmlExtensions.PatchOperationSafeAdd">
+          <xpath>/Defs/ThingDef[defName="TransportPodSmall"]</xpath>
+          <value>
+            <uiOrder>2200</uiOrder>
+            <designatorDropdown>TransportPods</designatorDropdown>
+          </value>
+        </li>
+
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>

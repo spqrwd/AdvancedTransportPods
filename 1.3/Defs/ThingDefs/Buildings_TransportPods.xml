@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DesignatorDropdownGroupDef>
+    <defName>TransportPods</defName>
+  </DesignatorDropdownGroupDef>
+
+  <!-- ========================== Advanced Transport Pod Abstract ========================== -->
+
+  <ThingDef Abstract="True" Name="AdvTransportPodBase" ParentName="AdvTransportPodParentBase">
+    <description>A launchable sub-orbital cargo pod capable of carrying people, items, or animals. Can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</description>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <designationCategory>Misc</designationCategory>
+    <designatorDropdown>TransportPods</designatorDropdown>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <comps>
+      <li Class="CompProperties_Launchable">
+        <skyfallerLeaving>DropPodLeaving</skyfallerLeaving>
+      </li>
+      <li Class="CompProperties_Facility">
+        <maxSimultaneous>0</maxSimultaneous>
+        <maxDistance>0</maxDistance>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_ContentsTransporter</li>
+    </inspectorTabs>
+    <placeWorkers>
+      <li>PlaceWorker_NeedsFuelingPort</li>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <uiIconScale>0.55</uiIconScale>
+  </ThingDef>
+
+</Defs>
