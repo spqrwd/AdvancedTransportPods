@@ -55,6 +55,7 @@
                           <li Class="CompProperties_Transporter">
                             <restEffectiveness>0.8</restEffectiveness>
                             <massCapacity>{pod200MassCapacity}</massCapacity>
+                            <canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
                           </li>
                         </comps>
                         <researchPrerequisites>

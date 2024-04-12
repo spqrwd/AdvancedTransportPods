@@ -30,7 +30,7 @@
                   <li>MultiAnalyzer</li>
                 </prerequisites>
                 <researchViewX>14.00</researchViewX>
-                <researchViewY>0.00</researchViewY>
+                <researchViewY>5.00</researchViewY>
               </ResearchProjectDef>
             </value>
           </li>
@@ -85,7 +85,7 @@
                       <li>MultiAnalyzer</li>
                     </prerequisites>
                     <researchViewX>14.00</researchViewX>
-                    <researchViewY>0.00</researchViewY>
+                    <researchViewY>5.05</researchViewY>
                   </ResearchProjectDef>
                 </value>
               </li>

@@ -25,7 +25,7 @@
                 </prerequisites>
                 <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
                 <researchViewX>13.00</researchViewX>
-                <researchViewY>0.00</researchViewY>
+                <researchViewY>5.20</researchViewY>
               </ResearchProjectDef>
             </value>
           </li>

@@ -16,6 +16,13 @@
 - All added research options, the new pod launcher, and individual pods can be enabled or disabled in the mod settings.|
 - Supports RimWorld versions 1.3 through 1.5. Support for older versions was dropped.
 </content>
+
+  <HugsLib.UpdateFeatureDef ParentName="UpdateFeatureBase">
+    <defName>AdvancedTransportPodsv2_2_0_1</defName>
+    <assemblyVersion>2.0.1</assemblyVersion>
+    <content>Code refactor patch.
+</content>
+
   </HugsLib.UpdateFeatureDef>
 
 </Defs>
