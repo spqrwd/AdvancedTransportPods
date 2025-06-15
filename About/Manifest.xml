@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
   <identifier>AdvancedTransportPodsv2</identifier>
-  <version>2.0.1</version>
+  <version>2.1.0</version>
   <showCrossPromotions>true</showCrossPromotions>
   <manifestUri>https://raw.githack.com/spqrwd/AdvancedTransportPods/main/About/Manifest.xml</manifestUri>
   <downloadUri>https://github.com/spqrwd/AdvancedTransportPods/releases/latest</downloadUri>

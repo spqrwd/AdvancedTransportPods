@@ -23,6 +23,14 @@
     <content>Code refactor patch.
 </content>
 
+  <HugsLib.UpdateFeatureDef ParentName="UpdateFeatureBase">
+    <defName>AdvancedTransportPodsv2_2_1_0</defName>
+    <assemblyVersion>2.1.0</assemblyVersion>
+    <content>Updated for Rimworld 1.6.|
+- Can now be used in RW 1.6 and 1.5 also without XML Extensions, by dropping support for settings and just using default values.|
+- Settings have been omitted for RW 1.6, as XML Extensions does not support it at the time of this update.
+</content>
+
   </HugsLib.UpdateFeatureDef>
 
 </Defs>

@@ -14,7 +14,7 @@
         <operations>
 
           <li Class="PatchOperationAdd">
-            <xpath>/Defs</xpath>
+            <xpath>Defs</xpath>
             <value>
               <ResearchProjectDef>
                 <defName>AdvancedTransportPods</defName>
@@ -22,31 +22,36 @@
                 <description>Construct a more advanced version of the Pod laucnher, and new cargo pods with even greater capacities. Pods can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</description>
                 <baseCost>3000</baseCost>
                 <techLevel>Spacer</techLevel>
+                <hiddenPrerequisites>
+                  <li>TransportPod</li>
+                </hiddenPrerequisites>
                 <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
                 <requiredResearchFacilities>
                   <li>MultiAnalyzer</li>
                 </requiredResearchFacilities>
-                <prerequisites>
-                  <li>MultiAnalyzer</li>
-                </prerequisites>
-                <researchViewX>14.00</researchViewX>
-                <researchViewY>5.00</researchViewY>
+                <researchViewY>5.10</researchViewY>
               </ResearchProjectDef>
             </value>
           </li>
 
           <li Class="PatchOperationConditional">
-            <xpath>/Defs/ResearchProjectDef[defName="LargeTransportPods"]</xpath>
+            <xpath>Defs/ResearchProjectDef[defName="LargeTransportPods"]</xpath>
             <nomatch Class="PatchOperationAdd">
-              <xpath>/Defs/ResearchProjectDef[defName="AdvancedTransportPods"]/prerequisites</xpath>
+              <xpath>Defs/ResearchProjectDef[defName="AdvancedTransportPods"]</xpath>
               <value>
-                <li>TransportPod</li>
+                <prerequisites>
+                  <li>MicroelectronicsBasics</li>
+                </prerequisites>
+                <researchViewX>13.00</researchViewX>
               </value>
             </nomatch>
             <match Class="PatchOperationAdd">
-              <xpath>/Defs/ResearchProjectDef[defName="AdvancedTransportPods"]/prerequisites</xpath>
+              <xpath>Defs/ResearchProjectDef[defName="AdvancedTransportPods"]</xpath>
               <value>
-                <li>LargeTransportPods</li>
+                <prerequisites>
+                  <li>LargeTransportPods</li>
+                </prerequisites>
+                <researchViewX>14.00</researchViewX>
               </value>
             </match>
           </li>
@@ -69,7 +74,7 @@
             <operations>
 
               <li Class="PatchOperationAdd">
-                <xpath>/Defs</xpath>
+                <xpath>Defs</xpath>
                 <value>
                   <ResearchProjectDef>
                     <defName>AdvancedTransportPods</defName>
@@ -77,31 +82,36 @@
                     <description>Construct a more advanced version of the Pod laucnher, and new cargo pods with even greater capacities. Pods can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</description>
                     <baseCost>3000</baseCost>
                     <techLevel>Spacer</techLevel>
+                    <hiddenPrerequisites>
+                      <li>TransportPod</li>
+                    </hiddenPrerequisites>
                     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
                     <requiredResearchFacilities>
                       <li>MultiAnalyzer</li>
                     </requiredResearchFacilities>
-                    <prerequisites>
-                      <li>MultiAnalyzer</li>
-                    </prerequisites>
-                    <researchViewX>14.00</researchViewX>
-                    <researchViewY>5.05</researchViewY>
+                    <researchViewY>5.10</researchViewY>
                   </ResearchProjectDef>
                 </value>
               </li>
 
               <li Class="PatchOperationConditional">
-                <xpath>/Defs/ResearchProjectDef[defName="LargeTransportPods"]</xpath>
+                <xpath>Defs/ResearchProjectDef[defName="LargeTransportPods"]</xpath>
                 <nomatch Class="PatchOperationAdd">
-                  <xpath>/Defs/ResearchProjectDef[defName="AdvancedTransportPods"]/prerequisites</xpath>
+                  <xpath>Defs/ResearchProjectDef[defName="AdvancedTransportPods"]</xpath>
                   <value>
-                    <li>TransportPod</li>
+                    <prerequisites>
+                      <li>MicroelectronicsBasics</li>
+                    </prerequisites>
+                    <researchViewX>13.00</researchViewX>
                   </value>
                 </nomatch>
                 <match Class="PatchOperationAdd">
-                  <xpath>/Defs/ResearchProjectDef[defName="AdvancedTransportPods"]/prerequisites</xpath>
+                  <xpath>Defs/ResearchProjectDef[defName="AdvancedTransportPods"]</xpath>
                   <value>
-                    <li>LargeTransportPods</li>
+                    <prerequisites>
+                      <li>LargeTransportPods</li>
+                    </prerequisites>
+                    <researchViewX>14.00</researchViewX>
                   </value>
                 </match>
               </li>

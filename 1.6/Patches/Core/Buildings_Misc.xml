@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Add the vanilla pod launcher to the dropdown menu -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="PodLauncher"]</xpath>
+    <value>
+      <designatorDropdown>PodLaunchers</designatorDropdown>
+    </value>
+  </Operation>
+
+    <!-- Add linkable facilities to the vanilla Pod Launcher -->
+
+    <Operation Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="PodLauncher"]/comps</xpath>
+        <value>
+          <li Class="CompProperties_AffectedByFacilities">
+            <linkableFacilities />
+          </li>
+        </value>
+      </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+      <value>
+        <li>AdvTransportPod600M</li>
+        <li>AdvTransportPod400M</li>
+        <li>AdvTransportPod300M</li>
+        <li>AdvTransportPod250M</li>
+        <li>AdvTransportPod200M</li>
+        <li>AdvTransportPod50M</li>
+      </value>
+    </Operation>
+
+    <!-- Add linkable facilities to the advanced Pod Launcher -->
+
+    <Operation Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="PodLauncherMKII"]</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[@Name="AdvTransportPodLauncherBase"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+        <value>
+          <li>AdvTransportPod600M</li>
+          <li>AdvTransportPod400M</li>
+          <li>AdvTransportPod300M</li>
+          <li>AdvTransportPod250M</li>
+          <li>AdvTransportPod200M</li>
+          <li>AdvTransportPod50M</li>
+        </value>
+      </match>
+    </Operation>
+
+</Patch>

@@ -32,7 +32,7 @@
                 <operations>
 
                   <li Class="PatchOperationAdd">
-                    <xpath>/Defs</xpath>
+                    <xpath>Defs</xpath>
                     <value>
                       <ThingDef ParentName="AdvTransportPodBase">
                         <defName>AdvTransportPod250M</defName>
@@ -69,9 +69,9 @@
                   <!-- Vanilla Pod Launcher -->
 
                   <li Class="PatchOperationConditional">
-                    <xpath>/Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>
+                    <xpath>Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>
                     <nomatch Class="PatchOperationAdd">
-                      <xpath>/Defs/ThingDef[defName="PodLauncher"]/comps</xpath>
+                      <xpath>Defs/ThingDef[defName="PodLauncher"]/comps</xpath>
                       <value>
                         <li Class="CompProperties_AffectedByFacilities">
                           <linkableFacilities />
@@ -81,7 +81,7 @@
                   </li>
 
                   <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+                    <xpath>Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
                     <order>Prepend</order>
                     <value>
                       <li>AdvTransportPod250M</li>
@@ -91,9 +91,9 @@
                   <!-- Advanced Pod Launcher -->
 
                   <li Class="PatchOperationConditional">
-                    <xpath>/Defs/ThingDef[defName="PodLauncherMKII"]</xpath>
+                    <xpath>Defs/ThingDef[defName="PodLauncherMKII"]</xpath>
                     <match Class="PatchOperationAdd">
-                      <xpath>/Defs/ThingDef[@Name="AdvTransportPodLauncherBase"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+                      <xpath>Defs/ThingDef[@Name="AdvTransportPodLauncherBase"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
                       <order>Prepend</order>
                       <value>
                         <li>AdvTransportPod250M</li>

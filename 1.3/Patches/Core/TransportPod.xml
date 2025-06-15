@@ -2,7 +2,7 @@
 <Patch>
 
   <Operation Class="XmlExtensions.PatchOperationSafeAdd">
-    <xpath>/Defs/ThingDef[defName="TransportPod"]/comps/li[@Class="CompProperties_Transporter"]</xpath>
+    <xpath>Defs/ThingDef[defName="TransportPod"]/comps/li[@Class="CompProperties_Transporter"]</xpath>
     <value>
       <canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
     </value>

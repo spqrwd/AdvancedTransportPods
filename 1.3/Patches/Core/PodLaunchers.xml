@@ -25,13 +25,13 @@
         </valueOperations>
         <apply>
           <Operation Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
+            <xpath>Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
             <value>
               <fuelCapacity>{vanillaPodLauncherFuelCapacity}</fuelCapacity>
             </value>
           </Operation>
           <Operation Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_Refuelable"]/initialConfigurableTargetFuelLevel</xpath>
+            <xpath>Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_Refuelable"]/initialConfigurableTargetFuelLevel</xpath>
             <value>
               <initialConfigurableTargetFuelLevel>{vanillaPodLauncherInitialTargetFuelLevel}</initialConfigurableTargetFuelLevel>
             </value>
@@ -53,7 +53,7 @@
       <!-- Add the vanilla pod launcher to the dropdown menu -->
 
       <Operation Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName="PodLauncher"]</xpath>
+        <xpath>Defs/ThingDef[defName="PodLauncher"]</xpath>
         <value>
           <designatorDropdown>PodLaunchers</designatorDropdown>
         </value>
@@ -82,7 +82,7 @@
         <apply>
 
           <Operation Class="PatchOperationAdd">
-            <xpath>/Defs</xpath>
+            <xpath>Defs</xpath>
             <value>
               <ThingDef ParentName="AdvTransportPodLauncherBase">
                 <defName>PodLauncherMKII</defName>

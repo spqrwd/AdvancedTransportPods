@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DesignatorDropdownGroupDef>
+    <defName>PodLaunchers</defName>
+  </DesignatorDropdownGroupDef>
+
+  <!-- =============================== Pod Launcher Abstract =============================== -->
+
+  <ThingDef Abstract="True" Name="AdvTransportPodLauncherBase" ParentName="BuildingBase">
+    <description>An advanced fueling port for launching one transport pod. Pod launchers can launch as a group - but the launchers must be placed adjacent to each other.</description>
+    <thingClass>Building_PodLauncher</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <rotatable>true</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1.0</fillPercent>
+    <designationCategory>Misc</designationCategory>
+    <uiOrder>2200</uiOrder>
+    <designatorDropdown>PodLaunchers</designatorDropdown>
+    <canOverlapZones>false</canOverlapZones>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <building>
+      <hasFuelingPort>true</hasFuelingPort>
+    </building>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities/>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_FuelingPort</li>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <uiIconScale>0.9</uiIconScale>
+  </ThingDef>
+
+  <!-- =============================== Pod Launcher MK II ================================== -->
+
+  <ThingDef ParentName="AdvTransportPodLauncherBase">
+    <defName>PodLauncherMKII</defName>
+    <label>pod launcher MKII</label>
+    <graphicData>
+      <texPath>PodLauncherMKII</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,3)</drawSize>
+    </graphicData>
+    <size>(1,2)</size>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Flammability>0.65</Flammability>
+      <Mass>100</Mass>
+    </statBases>
+    <costList>
+      <Steel>65</Steel>
+      <Uranium>10</Uranium>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelCapacity>450.0</fuelCapacity>
+        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+        <initialConfigurableTargetFuelLevel>450</initialConfigurableTargetFuelLevel>
+        <fuelFilter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <autoRefuelPercent>1</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+        <drawFuelGaugeInMap>true</drawFuelGaugeInMap>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <canEjectFuel>true</canEjectFuel>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>AdvancedTransportPods</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Defs>

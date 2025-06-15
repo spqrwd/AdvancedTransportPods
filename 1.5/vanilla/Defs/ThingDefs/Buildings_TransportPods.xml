@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DesignatorDropdownGroupDef>
+    <defName>TransportPods</defName>
+  </DesignatorDropdownGroupDef>
+
+  <!-- ========================== Advanced Transport Pod Abstract ========================== -->
+
+  <ThingDef Abstract="True" Name="AdvTransportPodBase" ParentName="BuildingBase">
+    <description>A launchable cargo pod capable of carrying people, items, or animals. Can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</description>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <designationCategory>Misc</designationCategory>
+    <uiOrder>2200</uiOrder>
+    <designatorDropdown>TransportPods</designatorDropdown>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <comps>
+      <li Class="CompProperties_Launchable">
+        <skyfallerLeaving>DropPodLeaving</skyfallerLeaving>
+      </li>
+      <li Class="CompProperties_Facility">
+        <maxSimultaneous>0</maxSimultaneous>
+        <maxDistance>0</maxDistance>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_ContentsTransporter</li>
+    </inspectorTabs>
+    <placeWorkers>
+      <li>PlaceWorker_NeedsFuelingPort</li>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <uiIconScale>0.55</uiIconScale>
+  </ThingDef>
+
+  <!-- ========================== Advanced Transport Pod 50 ================================ -->
+
+  <ThingDef ParentName="AdvTransportPodBase">
+    <defName>AdvTransportPod50M</defName>
+    <label>transport pod 50</label>
+    <graphicData>
+      <texPath>Things/Special/DropPod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.5,1.5)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>500</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>25</Steel>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Transporter">
+        <restEffectiveness>0.8</restEffectiveness>
+        <massCapacity>50</massCapacity>
+        <canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>TransportPod</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <!-- ========================== Advanced Transport Pod 200 =============================== -->
+
+  <ThingDef ParentName="AdvTransportPodBase">
+    <defName>AdvTransportPod200M</defName>
+    <label>transport pod 200</label>
+    <graphicData>
+      <texPath>AdvancedTransportPodA0</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.1,2.1)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>2400</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>85</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Transporter">
+        <restEffectiveness>0.8</restEffectiveness>
+        <massCapacity>200</massCapacity>
+        <canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>LargeTransportPods</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <!-- ========================== Advanced Transport Pod 250 =============================== -->
+
+  <ThingDef ParentName="AdvTransportPodBase">
+    <defName>AdvTransportPod250M</defName>
+    <label>transport pod 250</label>
+    <graphicData>
+      <texPath>AdvancedTransportPodA1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.15,2.15)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>3200</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>95</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Transporter">
+        <restEffectiveness>0.8</restEffectiveness>
+        <massCapacity>250</massCapacity>
+        <canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>LargeTransportPods</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <!-- ========================== Advanced Transport Pod 300 =============================== -->
+
+  <ThingDef ParentName="AdvTransportPodBase">
+    <defName>AdvTransportPod300M</defName>
+    <label>transport pod 300</label>
+    <graphicData>
+      <texPath>AdvancedTransportPodA2</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.2,2.2)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>100</Steel>
+      <Plasteel>10</Plasteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Transporter">
+        <restEffectiveness>0.8</restEffectiveness>
+        <massCapacity>300</massCapacity>
+        <canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>AdvancedTransportPods</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <!-- ========================== Advanced Transport Pod 400 =============================== -->
+
+  <ThingDef ParentName="AdvTransportPodBase">
+    <defName>AdvTransportPod400M</defName>
+    <label>transport pod 400</label>
+    <graphicData>
+      <texPath>AdvancedTransportPodA3</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.25,2.25)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>4800</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>125</Steel>
+      <Plasteel>15</Plasteel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Transporter">
+        <restEffectiveness>0.8</restEffectiveness>
+        <massCapacity>400</massCapacity>
+        <canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>AdvancedTransportPods</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+  </ThingDef>
+
+  <!-- ========================== Advanced Transport Pod 600 =============================== -->
+
+  <ThingDef ParentName="AdvTransportPodBase">
+    <defName>AdvTransportPod600M</defName>
+    <label>transport pod 600</label>
+    <graphicData>
+      <texPath>AdvancedTransportPodA4</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2.3,2.3)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>5600</WorkToBuild>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>225</Steel>
+      <Uranium>10</Uranium>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Transporter">
+        <restEffectiveness>0.8</restEffectiveness>
+        <massCapacity>600</massCapacity>
+        <canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>SuperTransportPod</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>9</constructionSkillPrerequisite>
+  </ThingDef>
+
+</Defs>

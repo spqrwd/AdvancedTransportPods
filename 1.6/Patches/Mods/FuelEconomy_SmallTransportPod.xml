@@ -10,7 +10,15 @@
       <operations>
 
         <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="TransportPodSmall"]/comps</xpath>
+          <xpath>/Defs/ThingDef[defName="TransportPodSmall"]</xpath>
+          <value>
+            <uiOrder>2200</uiOrder>
+            <designatorDropdown>TransportPods</designatorDropdown>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="TransportPodSmall"]/comps</xpath>
           <value>
             <li Class="CompProperties_Facility">
               <maxSimultaneous>0</maxSimultaneous>
@@ -19,28 +27,26 @@
           </value>
         </li>
 
-        <li Class="XmlExtensions.PatchOperationSafeAdd">
-          <xpath>Defs/ThingDef[defName="TransportPodSmall"]/comps/li[@Class="CompProperties_Launchable"]</xpath>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="TransportPodSmall"]/comps/li[@Class="CompProperties_Launchable"]</xpath>
           <value>
             <skyfallerLeaving>DropPodLeaving</skyfallerLeaving>
           </value>
         </li>
 
-<!--
         <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="TransportPodSmall"]</xpath>
+          <xpath>/Defs/ThingDef[defName="TransportPodSmall"]/comps/li[@Class="CompProperties_Transporter"]</xpath>
           <value>
-            <designatorDropdown>TransportPods</designatorDropdown>
+            <canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
           </value>
         </li>
--->
 
         <!-- Vanilla Pod Launcher -->
 
         <li Class="PatchOperationConditional">
-          <xpath>Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>
+          <xpath>/Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>
           <nomatch Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="PodLauncher"]/comps</xpath>
+            <xpath>/Defs/ThingDef[defName="PodLauncher"]/comps</xpath>
             <value>
               <li Class="CompProperties_AffectedByFacilities">
                 <linkableFacilities />
@@ -50,7 +56,7 @@
         </li>
 
         <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+          <xpath>/Defs/ThingDef[defName="PodLauncher"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
           <value>
             <li>TransportPodSmall</li>
           </value>
@@ -59,9 +65,9 @@
         <!-- Advanced Pod Launcher -->
 
         <li Class="PatchOperationConditional">
-          <xpath>Defs/ThingDef[defName="PodLauncherMKII"]</xpath>
+          <xpath>/Defs/ThingDef[defName="PodLauncherMKII"]</xpath>
           <match Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[@Name="AdvTransportPodLauncherBase"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+            <xpath>/Defs/ThingDef[@Name="AdvTransportPodLauncherBase"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
             <value>
               <li>TransportPodSmall</li>
             </value>

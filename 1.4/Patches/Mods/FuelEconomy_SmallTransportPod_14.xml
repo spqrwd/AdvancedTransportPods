@@ -10,7 +10,7 @@
       <operations>
 
         <li Class="XmlExtensions.PatchOperationSafeAdd">
-          <xpath>/Defs/ThingDef[defName="TransportPodSmall"]</xpath>
+          <xpath>Defs/ThingDef[defName="TransportPodSmall"]</xpath>
           <value>
             <uiOrder>2200</uiOrder>
             <designatorDropdown>TransportPods</designatorDropdown>

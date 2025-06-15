@@ -12,7 +12,7 @@
         <operations>
 
           <li Class="PatchOperationAdd">
-            <xpath>/Defs</xpath>
+            <xpath>Defs</xpath>
             <value>
               <ResearchProjectDef>
                 <defName>SuperTransportPod</defName>
@@ -20,51 +20,62 @@
                 <description>Construct launchable sub-orbital super cargo pod. Pods can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</description>
                 <baseCost>4000</baseCost>
                 <techLevel>Spacer</techLevel>
+                <hiddenPrerequisites>
+                  <li>TransportPod</li>
+                  <li>AdvancedFabrication</li>
+                </hiddenPrerequisites>
                 <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
                 <requiredResearchFacilities>
                   <li>MultiAnalyzer</li>
                 </requiredResearchFacilities>
-                <hiddenPrerequisites>
-                  <li>AdvancedFabrication</li>
-                </hiddenPrerequisites>
-                <researchViewY>5.05</researchViewY>
+                <researchViewY>5.10</researchViewY>
               </ResearchProjectDef>
             </value>
           </li>
 
           <li Class="PatchOperationConditional">
-            <xpath>/Defs/ResearchProjectDef[defName="AdvancedTransportPods"]</xpath>
+            <xpath>Defs/ResearchProjectDef[defName="AdvancedTransportPods"]</xpath>
             <nomatch Class="PatchOperationConditional">
-              <xpath>/Defs/ResearchProjectDef[defName="LargeTransportPods"]</xpath>
+              <xpath>Defs/ResearchProjectDef[defName="LargeTransportPods"]</xpath>
               <nomatch Class="PatchOperationAdd">
-                <xpath>/Defs/ResearchProjectDef[defName="SuperTransportPod"]</xpath>
+                <xpath>Defs/ResearchProjectDef[defName="SuperTransportPod"]</xpath>
                 <value>
                   <prerequisites>
-                    <li>TransportPod</li>
-                    <li>MultiAnalyzer</li>
+                    <li>MicroelectronicsBasics</li>
                   </prerequisites>
-                  <researchViewX>14.00</researchViewX>
+                  <researchViewX>13.00</researchViewX>
                 </value>
               </nomatch>
               <match Class="PatchOperationAdd">
-                <xpath>/Defs/ResearchProjectDef[defName="SuperTransportPod"]</xpath>
+                <xpath>Defs/ResearchProjectDef[defName="SuperTransportPod"]</xpath>
                 <value>
                   <prerequisites>
                     <li>LargeTransportPods</li>
-                    <li>MultiAnalyzer</li>
                   </prerequisites>
                   <researchViewX>14.00</researchViewX>
                 </value>
               </match>
             </nomatch>
-            <match Class="PatchOperationAdd">
-              <xpath>/Defs/ResearchProjectDef[defName="SuperTransportPod"]</xpath>
-              <value>
-                <prerequisites>
-                  <li>AdvancedTransportPods</li>
-                </prerequisites>
-                <researchViewX>15.00</researchViewX>
-              </value>
+            <match Class="PatchOperationConditional">
+              <xpath>Defs/ResearchProjectDef[defName="LargeTransportPods"]</xpath>
+              <nomatch Class="PatchOperationAdd">
+                <xpath>Defs/ResearchProjectDef[defName="SuperTransportPod"]</xpath>
+                <value>
+                  <prerequisites>
+                    <li>AdvancedTransportPods</li>
+                  </prerequisites>
+                  <researchViewX>14.00</researchViewX>
+                </value>
+              </nomatch>
+              <match Class="PatchOperationAdd">
+                <xpath>Defs/ResearchProjectDef[defName="SuperTransportPod"]</xpath>
+                <value>
+                  <prerequisites>
+                    <li>AdvancedTransportPods</li>
+                  </prerequisites>
+                  <researchViewX>15.00</researchViewX>
+                </value>
+              </match>
             </match>
           </li>
 

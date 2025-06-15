@@ -10,6 +10,14 @@
       <operations>
 
         <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="TransportPodSmall"]</xpath>
+          <value>
+            <uiOrder>2200</uiOrder>
+            <designatorDropdown>TransportPods</designatorDropdown>
+          </value>
+        </li>
+
+        <li Class="PatchOperationAdd">
           <xpath>Defs/ThingDef[defName="TransportPodSmall"]/comps</xpath>
           <value>
             <li Class="CompProperties_Facility">
@@ -19,21 +27,19 @@
           </value>
         </li>
 
-        <li Class="XmlExtensions.PatchOperationSafeAdd">
+        <li Class="PatchOperationAdd">
           <xpath>Defs/ThingDef[defName="TransportPodSmall"]/comps/li[@Class="CompProperties_Launchable"]</xpath>
           <value>
             <skyfallerLeaving>DropPodLeaving</skyfallerLeaving>
           </value>
         </li>
 
-<!--
         <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="TransportPodSmall"]</xpath>
+          <xpath>Defs/ThingDef[defName="TransportPodSmall"]/comps/li[@Class="CompProperties_Transporter"]</xpath>
           <value>
-            <designatorDropdown>TransportPods</designatorDropdown>
+            <canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
           </value>
         </li>
--->
 
         <!-- Vanilla Pod Launcher -->
 

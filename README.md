@@ -1,10 +1,12 @@
-[![RimWorld 1.5](https://img.shields.io/badge/RimWorld-1.5-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/)
+[![RimWorld 1.6](https://img.shields.io/badge/RimWorld-1.6-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/)
 ...
 [![RimWorld 1.3](https://img.shields.io/badge/RimWorld-1.3-brightgreen.svg?style=plastic&logo=steam)](https://rimworldgame.com/)
 
 # Advanced Transport Pods v2 for RimWorld
 
-A complete redesign of the original mod. Now using [XML Extensions](https://steamcommunity.com/sharedfiles/filedetails/?id=2574315206) to incorporate mod settings, for allowing the customization of attributes of both pod launchers and added transport pods.
+A complete redesign of the original mod. Now using [XML Extensions](https://github.com/15adhami/XmlExtensions) to incorporate mod settings, for allowing the customization of attributes of both pod launchers and added transport pods.
+
+Can also be used without XML Extensions in Rimworld 1.6 and 1.5, dropping support for mod settings. In this case all content is enabled and uses default values.
 
 All the new transport pods, as well as both pod launchers, are added into their own respective drop down lists in the Architect menu's Misc category, where they can be accessed via a single icon for the pod launchers and another for transport pods. All the added transport pods will also appear in the linkable facilities on both pod launchers, where it's more convenient to just click on the pod launcher when building a new pod instead of browsing through the Architect menu.
 
@@ -106,7 +108,7 @@ Default resource requirements:
 -   2  Components  ( 75 % )
 ```
 
-### Super Transport Pod
+### Super Transport Pod (600)
 
 **Note! This pod is disabled by default, and must be enabled in the mod settings.**
 
@@ -120,13 +122,22 @@ Construction skill needed: 9
 
 Default resource requirements:
 - 225  Steel
--  15  Uranium
+-  10  Uranium
 -   1  Advanced Component
 ```
 
 ---
 
 ## Updates
+
+`v2.1.0`
+
+- Update for Rimworld 1.6 (without settings).
+- Added support in 1.6 and 1.5 to use this mod without XML Extensions, which drops the mod settings. All content is enabled and uses default values.
+
+`v2.0.1`
+
+- Code refactor.
 
 `v2.0.0`
 
