@@ -38,11 +38,11 @@
     <uiIconScale>0.9</uiIconScale>
   </ThingDef>
 
-  <!-- =============================== Pod Launcher MK II ================================== -->
+  <!-- =============================== Advanced Pod Launcher =============================== -->
 
   <ThingDef ParentName="AdvTransportPodLauncherBase">
     <defName>PodLauncherMKII</defName>
-    <label>pod launcher MKII</label>
+    <label>advanced pod launcher</label>
     <graphicData>
       <texPath>PodLauncherMKII</texPath>
       <graphicClass>Graphic_Multi</graphicClass>

@@ -6,7 +6,7 @@
 
 A complete redesign of the original mod. Now using [XML Extensions](https://github.com/15adhami/XmlExtensions) to incorporate mod settings, for allowing the customization of attributes of both pod launchers and added transport pods.
 
-Can also be used without XML Extensions in Rimworld 1.6 and 1.5, dropping support for mod settings. In this case all content is enabled and uses default values.
+Can also be used without XML Extensions in Rimworld 1.6 and 1.5, dropping support for mod settings. In this case all content is enabled and uses default values. You will need to dive into the XML files if you want to change any values.
 
 All the new transport pods, as well as both pod launchers, are added into their own respective drop down lists in the Architect menu's Misc category, where they can be accessed via a single icon for the pod launchers and another for transport pods. All the added transport pods will also appear in the linkable facilities on both pod launchers, where it's more convenient to just click on the pod launcher when building a new pod instead of browsing through the Architect menu.
 
@@ -117,18 +117,23 @@ This pod is completely overpowered and should not be used by anyone, ever. Never
 Requires the research of a special spacer level technology to unlock. No significant material cost discounts.
 
 ```none
-Required research: Transport pod, Large transport pods, Microelectronics, Advanced transport pods, Super advanced transport pod
+Required research: Transport pod, Large transport pods, Microelectronics, Advanced transport pods, Advanced super transport pod
 Construction skill needed: 9
 
 Default resource requirements:
 - 225  Steel
--  10  Uranium
+-  15  Uranium
 -   1  Advanced Component
 ```
 
 ---
 
 ## Updates
+
+`v2.2.0`
+
+- Now supports mod settings via XML Extensions also in Rimworld 1.6.
+- Code refactor and bug fixes.
 
 `v2.1.0`
 

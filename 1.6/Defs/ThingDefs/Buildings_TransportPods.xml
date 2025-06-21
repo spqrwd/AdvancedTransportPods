@@ -204,7 +204,7 @@
 
   <ThingDef ParentName="AdvTransportPodBase">
     <defName>AdvTransportPod600M</defName>
-    <label>transport pod 600</label>
+    <label>super transport pod</label>
     <graphicData>
       <texPath>AdvancedTransportPodA4</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -228,7 +228,7 @@
       </li>
     </comps>
     <researchPrerequisites>
-      <li>SuperTransportPod</li>
+      <li>SuperTransportPods</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>9</constructionSkillPrerequisite>
   </ThingDef>

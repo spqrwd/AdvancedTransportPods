@@ -4,7 +4,7 @@
   <name>Advanced Transport Pods v2</name>
   <author>crewd</author>
   <packageId>crewd.AdvancedTransportPodsV2</packageId>
-  <modVersion IgnoreIfNoMatchingField="True">2.1.0</modVersion>
+  <modVersion IgnoreIfNoMatchingField="True">2.2.0</modVersion>
   <url>https://steamcommunity.com/workshop/filedetails/?id=3205648859</url>
   <supportedVersions>
     <li>1.3</li>
@@ -14,17 +14,16 @@
   </supportedVersions>
   <description>Advanced Transport Pods (ATP) v2
 
-Several aspects of the mod can be tweaked from the mod settings if you have Imranfish's XML Extensions enabled. However, since XML Extensions does not support RimWorld 1.6 at the time of this update, there are no mod settings available.
-
 Adds another pod launcher and new versions of transport pods, with additional research options to unlock them.
+Several aspects of the mod can be tweaked from the mod settings if you have Imranfish's XML Extensions enabled.
 
 V2 is a complete redesign of the mod:
-- Added dependency to XML Extensions (mod) for incorporating mod settings
-- The most important values for drop pods and launchers can now be customized in the mod settings
-- Support for RimWorld versions older than 1.3 was dropped
+- Added an optional dependency to hte XML Extensions mod for incorporating mod settings
+- Many aspects of the drop pods and launchers can now be customized in the mod settings
+- Support for Rimworld versions older than 1.3 have been dropped
 
 Should be placed after Uuugggg's Fuel Economy mod for the small transport pod to appear in the pod launchers' linkable facilities.
-Also supports Rimefeller for automated refueling of the Pod Launcher MKII.
+Also supports Rimefeller for automated refueling of the new pod launcher.
 </description>
 
   <incompatibleWith>

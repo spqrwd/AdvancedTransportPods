@@ -2,7 +2,7 @@
 <Defs>
 
   <ResearchProjectDef>
-    <defName>SuperTransportPod</defName>
+    <defName>SuperTransportPods</defName>
     <label>advanced super transport pod</label>
     <description>Construct launchable super cargo pod. Pods can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</description>
     <baseCost>4000</baseCost>
@@ -18,8 +18,8 @@
     <requiredResearchFacilities>
       <li>MultiAnalyzer</li>
     </requiredResearchFacilities>
-    <researchViewX>15.00</researchViewX>
-    <researchViewY>5.10</researchViewY>
+    <researchViewX>14.00</researchViewX>
+    <researchViewY>5.80</researchViewY>
   </ResearchProjectDef>
 
 </Defs>

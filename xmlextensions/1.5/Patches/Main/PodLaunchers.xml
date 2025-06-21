@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Vanilla pod launcher settings -->
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>crewd.AdvancedTransportPods</modId>
+    <key>VanillaPodLauncherSettingsOn</key>
+    <defaultValue>False</defaultValue>
+    <caseTrue>
+
+      <Operation Class="XmlExtensions.AggregateValues">
+        <valueOperations>
+          <Operation Class="XmlExtensions.UseSetting">
+            <modId>crewd.AdvancedTransportPods</modId>
+            <key>vanillaPodLauncherFuelCapacity</key>
+            <defaultValue>150</defaultValue>
+          </Operation>
+          <!-- <Operation Class="XmlExtensions.CreateVariable">
+              <value>{vanillaPodLauncherFuelCapacity}</value>
+              <value2>0.5</value2>
+              <operation>*</operation>
+              <storeIn>vanillaPodLauncherInitialTargetFuelLevel</storeIn>
+          </Operation> -->
+        </valueOperations>
+        <apply>
+          <Operation Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "PodLauncher"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
+            <value>
+              <fuelCapacity>{vanillaPodLauncherFuelCapacity}</fuelCapacity>
+            </value>
+          </Operation>
+          <Operation Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "PodLauncher"]/comps/li[@Class="CompProperties_Refuelable"]/initialConfigurableTargetFuelLevel</xpath>
+            <value>
+              <initialConfigurableTargetFuelLevel>{vanillaPodLauncherFuelCapacity}</initialConfigurableTargetFuelLevel>
+            </value>
+          </Operation>
+        </apply>
+      </Operation>
+
+    </caseTrue>
+  </Operation>
+
+  <!-- Advanced pod launcher -->
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>crewd.AdvancedTransportPods</modId>
+    <key>AdvancedPodLauncherOn</key>
+    <defaultValue>True</defaultValue>
+
+    <!-- Advanced pod launcher enabled -->
+
+    <caseTrue>
+
+      <!-- Add the vanilla pod launcher to the dropdown menu -->
+      <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "PodLauncher"]</xpath>
+        <value>
+          <designatorDropdown>PodLaunchers</designatorDropdown>
+        </value>
+      </Operation>
+
+      <!-- Advanced Pod Launcher settings -->
+      <Operation Class="XmlExtensions.AggregateValues">
+        <valueOperations>
+          <Operation Class="XmlExtensions.UseSettings">
+            <modId>crewd.AdvancedTransportPods</modId>
+            <keys>
+              <li>advancedPodLauncherFuelCapacity</li>
+            </keys>
+            <defaultValues>
+              <li>300</li>
+            </defaultValues>
+          </Operation>
+          <!-- <Operation Class="XmlExtensions.CreateVariable">
+            <value>{advancedPodLauncherFuelCapacity}</value>
+            <value2>0.5</value2>
+            <operation>*</operation>
+            <storeIn>advancedPodLauncherInitialTargetFuelLevel</storeIn>
+          </Operation> -->
+        </valueOperations>
+        <apply>
+
+          <Operation Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "PodLauncherMKII"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
+            <value>
+              <fuelCapacity>{advancedPodLauncherFuelCapacity}</fuelCapacity>
+            </value>
+          </Operation>
+
+          <Operation Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName = "PodLauncherMKII"]/comps/li[@Class="CompProperties_Refuelable"]/initialConfigurableTargetFuelLevel</xpath>
+            <value>
+              <initialConfigurableTargetFuelLevel>{advancedPodLauncherFuelCapacity}</initialConfigurableTargetFuelLevel>
+            </value>
+          </Operation>
+
+        </apply>
+      </Operation>
+    </caseTrue>
+
+    <!-- Advanced pod launcher disabled -->
+
+    <caseFalse>
+      <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef[defName = "PodLauncherMKII"]</xpath>
+      </Operation>
+    </caseFalse>
+
+  </Operation>
+
+</Patch>

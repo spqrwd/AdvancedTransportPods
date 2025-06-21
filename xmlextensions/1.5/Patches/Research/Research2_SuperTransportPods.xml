@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>crewd.AdvancedTransportPods</modId>
+    <key>AdvancedSuperTransportPodsOn</key>
+    <defaultValue>True</defaultValue>
+
+    <!-- Advanced super transport pods enabled -->
+
+    <caseTrue>
+      <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName = "AdvancedTransportPods"]</xpath>
+
+        <!-- Advanced transport pods disabled -->
+
+        <nomatch Class="PatchOperationConditional">
+          <xpath>Defs/ResearchProjectDef[defName = "LargeTransportPods"]</xpath>
+          <nomatch Class="PatchOperationSequence">
+            <success>Normal</success>
+            <operations>
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName = "SuperTransportPods"]/prerequisites</xpath>
+                <value>
+                  <prerequisites>
+                    <li>MicroelectronicsBasics</li>
+                  </prerequisites>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName = "SuperTransportPods"]/researchViewX</xpath>
+                <value>
+                  <researchViewX>12.00</researchViewX>
+                </value>
+              </li>
+            </operations>
+          </nomatch>
+          <match Class="PatchOperationSequence">
+            <success>Normal</success>
+            <operations>
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName = "SuperTransportPods"]/prerequisites</xpath>
+                <value>
+                  <prerequisites>
+                    <li>LargeTransportPods</li>
+                  </prerequisites>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>Defs/ResearchProjectDef[defName = "SuperTransportPods"]/researchViewX</xpath>
+                <value>
+                  <researchViewX>13.00</researchViewX>
+                </value>
+              </li>
+            </operations>
+          </match>
+        </nomatch>
+
+        <!-- Advanced transport pods enabled -->
+
+        <match Class="PatchOperationConditional">
+          <xpath>Defs/ResearchProjectDef[defName = "LargeTransportPods"]</xpath>
+          <nomatch Class="PatchOperationReplace">
+            <xpath>Defs/ResearchProjectDef[defName = "SuperTransportPods"]/researchViewX</xpath>
+            <value>
+              <researchViewX>13.00</researchViewX>
+            </value>
+          </nomatch>
+        </match>
+
+      </Operation>
+    </caseTrue>
+
+    <!-- Advanced super transport pods disabled -->
+
+    <caseFalse>
+      <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ResearchProjectDef[defName = "SuperTransportPods"]</xpath>
+      </Operation>
+    </caseFalse>
+  </Operation>
+
+</Patch>

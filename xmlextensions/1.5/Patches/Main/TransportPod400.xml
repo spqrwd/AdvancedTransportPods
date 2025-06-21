@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>crewd.AdvancedTransportPods</modId>
+    <key>AdvancedTransportPodsOn</key>
+    <defaultValue>False</defaultValue>
+
+    <!-- Advanced transport pods enabled -->
+
+    <caseTrue>
+      <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>crewd.AdvancedTransportPods</modId>
+        <key>AdvTransportPod400On</key>
+        <defaultValue>false</defaultValue>
+
+        <!-- Advanced pod 400 enabled -->
+
+        <caseTrue>
+          <Operation Class="XmlExtensions.UseSettings">
+            <modId>crewd.AdvancedTransportPods</modId>
+            <keys>
+              <li>pod400MassCapacity</li>
+              <li>pod400CostOfSteel</li>
+              <li>pod400CostOfPlasteel</li>
+              <li>pod400CostOfComponentIndustrial</li>
+            </keys>
+            <defaultValues>
+              <li>400</li>
+              <li>125</li>
+              <li>15</li>
+              <li>2</li>
+            </defaultValues>
+            <apply>
+
+              <Operation Class="PatchOperationSequence">
+                <success>Normal</success>
+                <operations>
+
+                  <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName = "AdvTransportPod400M"]/label</xpath>
+                    <value>
+                      <label>transport pod {pod400MassCapacity}</label>
+                    </value>
+                  </li>
+                  <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName = "AdvTransportPod400M"]/comps/li[@Class="CompProperties_Transporter"]/massCapacity</xpath>
+                    <value>
+                      <massCapacity>{pod400MassCapacity}</massCapacity>
+                    </value>
+                  </li>
+                  <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName = "AdvTransportPod400M"]/costList</xpath>
+                    <value>
+                      <costList>
+                        <Steel>{pod400CostOfSteel}</Steel>
+                        <Plasteel>{pod400CostOfPlasteel}</Plasteel>
+                        <ComponentIndustrial>{pod400CostOfComponentIndustrial}</ComponentIndustrial>
+                      </costList>
+                    </value>
+                  </li>
+
+                  <!-- Vanilla pod launcher -->
+
+                  <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName = "PodLauncher"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                      <xpath>Defs/ThingDef[defName = "PodLauncher"]/comps</xpath>
+                      <value>
+                        <li Class="CompProperties_AffectedByFacilities">
+                          <linkableFacilities />
+                        </li>
+                      </value>
+                    </nomatch>
+                  </li>
+
+                  <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName = "PodLauncher"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+                    <order>Prepend</order>
+                    <value>
+                      <li>AdvTransportPod400M</li>
+                    </value>
+                  </li>
+
+                  <!-- Advanced pod Launcher -->
+
+                  <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName = "PodLauncherMKII"]</xpath>
+                    <match Class="PatchOperationAdd">
+                      <xpath>Defs/ThingDef[@Name = "AdvTransportPodLauncherBase"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+                      <order>Prepend</order>
+                      <value>
+                        <li>AdvTransportPod400M</li>
+                      </value>
+                    </match>
+                  </li>
+
+                </operations>
+              </Operation>
+
+            </apply>
+          </Operation>
+        </caseTrue>
+
+        <!-- Advanced pod 400 disabled -->
+
+        <caseFalse>
+          <Operation Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName = "AdvTransportPod400M"]</xpath>
+          </Operation>
+        </caseFalse>
+      </Operation>
+
+    </caseTrue>
+
+    <!-- Advanced transport pods disabled -->
+
+    <caseFalse>
+      <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ThingDef[defName = "AdvTransportPod400M"]</xpath>
+      </Operation>
+    </caseFalse>
+
+  </Operation>
+
+</Patch>

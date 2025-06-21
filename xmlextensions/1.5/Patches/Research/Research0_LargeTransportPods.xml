@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>crewd.AdvancedTransportPods</modId>
+    <key>LargeTransportPodsOn</key>
+    <defaultValue>True</defaultValue>
+
+    <!-- Large transport pods disabled -->
+
+    <caseFalse>
+      <Operation Class="PatchOperationRemove">
+        <xpath>Defs/ResearchProjectDef[defName = "LargeTransportPods"]</xpath>
+      </Operation>
+    </caseFalse>
+
+  </Operation>
+
+</Patch>

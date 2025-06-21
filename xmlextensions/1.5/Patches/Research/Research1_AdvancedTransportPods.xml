@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="XmlExtensions.OptionalPatch">
+    <modId>crewd.AdvancedTransportPods</modId>
+    <key>AdvancedTransportPodsOn</key>
+    <defaultValue>True</defaultValue>
+
+    <!-- Advanced transport pods enabled -->
+
+    <caseTrue>
+      <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ResearchProjectDef[defName = "LargeTransportPods"]</xpath>
+        <nomatch Class="PatchOperationSequence">
+          <success>Normal</success>
+          <operations>
+            <li Class="PatchOperationReplace">
+              <xpath>Defs/ResearchProjectDef[defName = "AdvancedTransportPods"]/prerequisites</xpath>
+              <value>
+                <prerequisites>
+                  <li>MicroelectronicsBasics</li>
+                </prerequisites>
+              </value>
+            </li>
+            <li Class="PatchOperationReplace">
+              <xpath>Defs/ResearchProjectDef[defName = "AdvancedTransportPods"]/researchViewX</xpath>
+              <value>
+                <researchViewX>12.00</researchViewX>
+              </value>
+            </li>
+          </operations>
+        </nomatch>
+      </Operation>
+    </caseTrue>
+
+    <!-- Advanced transport pods disabled -->
+
+    <caseFalse>
+      <Operation Class="XmlExtensions.OptionalPatch">
+        <modId>crewd.AdvancedTransportPods</modId>
+        <key>AdvancedPodLauncherOn</key>
+        <defaultValue>False</defaultValue>
+
+        <!-- Advanced pod launcher disabled -->
+
+        <caseFalse>
+          <Operation Class="PatchOperationRemove">
+            <xpath>Defs/ResearchProjectDef[defName = "AdvancedTransportPods"]</xpath>
+          </Operation>
+        </caseFalse>
+
+        <!-- Advanced pod launcher enabled -->
+
+        <caseTrue>
+          <Operation Class="PatchOperationReplace">
+            <xpath>Defs/ResearchProjectDef[defName = "AdvancedTransportPods"]/baseCost</xpath>
+            <value>
+              <baseCost>1000</baseCost>
+            </value>
+          </Operation>
+          <Operation Class="PatchOperationConditional">
+            <xpath>Defs/ResearchProjectDef[defName = "LargeTransportPods"]</xpath>
+            <nomatch Class="PatchOperationSequence">
+              <success>Normal</success>
+              <operations>
+                <li Class="PatchOperationReplace">
+                  <xpath>Defs/ResearchProjectDef[defName = "AdvancedTransportPods"]/prerequisites</xpath>
+                  <value>
+                    <prerequisites>
+                      <li>MicroelectronicsBasics</li>
+                    </prerequisites>
+                  </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                  <xpath>Defs/ResearchProjectDef[defName = "AdvancedTransportPods"]/researchViewX</xpath>
+                  <value>
+                    <researchViewX>12.00</researchViewX>
+                  </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                  <xpath>Defs/ResearchProjectDef[defName = "AdvancedTransportPods"]/description</xpath>
+                  <value>
+                    <description>Construct a more advanced version of the Pod laucnher with a bigger range. Pods can be used for sending gifts, transporting people or supplies, surprise attacks, or reinforcing battles.</description>
+                  </value>
+                </li>
+              </operations>
+            </nomatch>
+          </Operation>
+        </caseTrue>
+
+      </Operation>
+    </caseFalse>
+  </Operation>
+
+</Patch>

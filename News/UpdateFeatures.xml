@@ -16,12 +16,14 @@
 - All added research options, the new pod launcher, and individual pods can be enabled or disabled in the mod settings.|
 - Supports RimWorld versions 1.3 through 1.5. Support for older versions was dropped.
 </content>
+  </HugsLib.UpdateFeatureDef>
 
   <HugsLib.UpdateFeatureDef ParentName="UpdateFeatureBase">
     <defName>AdvancedTransportPodsv2_2_0_1</defName>
     <assemblyVersion>2.0.1</assemblyVersion>
     <content>Code refactor patch.
 </content>
+  </HugsLib.UpdateFeatureDef>
 
   <HugsLib.UpdateFeatureDef ParentName="UpdateFeatureBase">
     <defName>AdvancedTransportPodsv2_2_1_0</defName>
@@ -30,7 +32,15 @@
 - Can now be used in RW 1.6 and 1.5 also without XML Extensions, by dropping support for settings and just using default values.|
 - Settings have been omitted for RW 1.6, as XML Extensions does not support it at the time of this update.
 </content>
+  </HugsLib.UpdateFeatureDef>
 
+  <HugsLib.UpdateFeatureDef ParentName="UpdateFeatureBase">
+    <defName>AdvancedTransportPodsv2_2_2_0</defName>
+    <assemblyVersion>2.2.0</assemblyVersion>
+    <content>Added a new XML Extensions schema which is shared between RW 1.5 and RW 1.6.|
+- Now supports mod settings via XML Extensions also in Rimworld 1.6.
+- Bug fixes etc
+</content>
   </HugsLib.UpdateFeatureDef>
 
 </Defs>
